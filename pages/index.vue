@@ -17,13 +17,15 @@ export default {
   components: { TopBanner, Website, Number, Example, Service, CaseWrap, Team },
   props: {},
   data() {
-    return {};
+    return {
+      test: '',
+    };
   },
   computed: {},
   watch: {},
   created() {},
   mounted() {},
-  methods: {}
+  methods: {},
 };
 </script>
 
