@@ -1,8 +1,8 @@
 <template>
-  <div class="wrap">
+  <div class="wrap section-wrap">
     <div class="top-wrap">
-      <h3>美国厚仁集团生态产品</h3>
-      <h5>全美首家AIRC权威认证的综合性教育机构 - 美国厚仁教育</h5>
+      <h3>工作经验</h3>
+      <h5>6年前端工作经验，业余时间自学java，golang等</h5>
       <img class="icon-list" src="@img/home/icon-list.png" alt="" />
     </div>
 
@@ -37,7 +37,7 @@ export default {
     return {};
   },
   computed: {
-    ...mapState('common', ['tabList'])
+    ...mapState('common', ['tabList']),
   },
   watch: {},
   created() {},
@@ -45,8 +45,8 @@ export default {
   methods: {
     goTo(item) {
       this.$router.push(`/website/${item.name}`);
-    }
-  }
+    },
+  },
 };
 </script>
 

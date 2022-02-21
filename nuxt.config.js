@@ -93,7 +93,7 @@ export default {
       plugins: [
         autoprefixer(),
         pxtorem({
-          rootValue: 140,
+          rootValue: 192,
           propList: ['*'],
           replace: true,
           // 该项仅在使用 Circle 组件时需要

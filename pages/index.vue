@@ -2,19 +2,18 @@
   <div class="">
     <TopBanner></TopBanner>
     <Website></Website>
-    <Service></Service>
+
     <CaseWrap></CaseWrap>
-    <Team></Team>
+
     <Example></Example>
-    <Number></Number>
   </div>
 </template>
 
 <script>
-import { TopBanner, Website, Number, Example, Service } from '@/components/home';
-import { CaseWrap, Team } from '@/components/common';
+import { TopBanner, Website, Example } from '@/components/home';
+import { CaseWrap } from '@/components/common';
 export default {
-  components: { TopBanner, Website, Number, Example, Service, CaseWrap, Team },
+  components: { TopBanner, Website, Example, CaseWrap },
   props: {},
   data() {
     return {

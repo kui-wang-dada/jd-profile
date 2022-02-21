@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="wrap section-wrap">
     <a-carousel :after-change="onChange">
       <div v-for="item in list" :key="item.title" class="item">
         <img class="bg" src="@img/home/banner.png" alt="" />
@@ -20,11 +20,11 @@ export default {
     return {
       list: [
         {
-          title: '美国厚仁集团',
+          title: '王逵',
           label:
-            '美国厚仁教育集团总部位于宾州匹兹堡，分办公室遍布全美各大城市，主营业务集美国初/高中 留学申请 及转学、紧急学术应对、美国本科/研究生申请和转学、学术辅导、美国寄宿家庭服务、前50美国名校保录、背景提升和职业规划等于一体，是全美首家荣获 AIRC权威认证 的留学生综合教育集团。'
-        }
-      ]
+            '美国厚仁教育集团总部位于宾州匹兹堡，分办公室遍布全美各大城市，主营业务集美国初/高中 留学申请 及转学、紧急学术应对、美国本科/研究生申请和转学、学术辅导、美国寄宿家庭服务、前50美国名校保录、背景提升和职业规划等于一体，是全美首家荣获 AIRC权威认证 的留学生综合教育集团。',
+        },
+      ],
     };
   },
   computed: {},
@@ -32,8 +32,8 @@ export default {
   created() {},
   mounted() {},
   methods: {
-    onChange() {}
-  }
+    onChange() {},
+  },
 };
 </script>
 

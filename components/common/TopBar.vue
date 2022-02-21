@@ -9,7 +9,7 @@
           :key="index"
           :class="{ isActive: activeIndex === index }"
           class="right-item"
-          @click="goTo(item)"
+          @click="goTo(item, index)"
         >
           <p>{{ item.title }}</p>
         </div>
@@ -43,41 +43,42 @@ export default {
     return {
       activeIndex: 0,
       headerChange: false,
-      shadowRoute: ['product'],
+      shadowRoute: ['work'],
       list: [
         {
           title: '首页',
-          name: ''
-        },
-        {
-          title: '项目经历',
-          name: 'website'
+          name: '',
         },
         {
           title: '工作经验',
-          name: 'product'
+          name: 'work',
+        },
+        {
+          title: '项目经历',
+          name: 'project',
         },
 
         {
           title: '职业规划+社群',
-          name: 'about'
+          name: 'career',
         },
         {
           title: '相关博客',
-          name: 'about'
-        }
-      ]
+          name: 'blog',
+        },
+      ],
     };
   },
   computed: {},
   watch: {
     $route(newV) {
       this.checkRoute(newV);
-    }
+    },
   },
   created() {},
   mounted() {
     this.checkRoute(this.$route);
+    this.initDomHeight();
     window.addEventListener('scroll', this.onScroll);
   },
 
@@ -86,43 +87,47 @@ export default {
     window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
+    initDomHeight() {
+      const sectionArr = document.getElementsByClassName('section-wrap');
+      let initTop = 50;
+      Array.prototype.map.call(sectionArr, (item, index) => {
+        if (index === 0) {
+          initTop = item.offsetTop + initTop;
+        }
+        this.list[index].num = item.offsetTop - initTop;
+      });
+    },
     handleMenu() {
       this.$notification.error({
         message: '正在开发中',
         description:
-          '语言替换放在最后完成，当所有内容确定后，再去写语言配置文件，比较高效；暂时只考虑中文简体/繁体/英文'
+          '语言替换放在最后完成，当所有内容确定后，再去写语言配置文件，比较高效；暂时只考虑中文简体/繁体/英文',
       });
     },
     onScroll() {
       const scrollTop = document.documentElement.scrollTop;
+
       if (scrollTop > 140) {
         this.headerChange = true;
-        if (this.$route.name === 'index') {
-          this.activeIndex = 1;
-        }
       } else {
-        if (this.$route.name !== 'product') {
-          this.headerChange = false;
-        }
-
-        if (this.$route.name === 'index') {
-          this.activeIndex = 0;
-        }
+        this.headerChange = false;
       }
-    },
-    goTo(item) {
-      if (item.name === 'website') {
-        if (this.$route.name !== 'index') {
-          this.$router.push(`/`);
+      let activeIndex = 0;
+      this.list.forEach((listItem, index) => {
+        if (scrollTop >= listItem.num) {
+          activeIndex = index;
         }
-        window.scrollTo({
-          top: 550,
-          behavior: 'smooth'
-        });
-        this.activeIndex = 1;
+      });
+      this.activeIndex = activeIndex;
+    },
+    goTo(item, index) {
+      if (item.name === 'blog') {
         return;
       }
-      this.$router.push(`/${item.name}`);
+      this.activeIndex = index;
+      const top = this.list[index].num;
+      console.log(top, this.list, 'top');
+      document.documentElement.scrollTo({ left: 0, top, behavior: 'smooth' });
     },
     checkRoute(newV) {
       console.log(newV, 'newV');
@@ -136,8 +141,8 @@ export default {
         const index = this.list.findIndex(item => item.name === name);
         this.activeIndex = index;
       }
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -148,7 +153,6 @@ export default {
   left: 0;
   top: 0;
   width: 100%;
-
   &.headerChange {
     height: 69px;
     background: #ffffff;

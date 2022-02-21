@@ -1,5 +1,5 @@
 <template>
-  <div class="wrap">
+  <div class="wrap section-wrap">
     <div class="top-wrap">
       <h3>权威认证+媒体报道</h3>
 
@@ -26,62 +26,62 @@ export default {
     return {
       record: [
         {
-          icon: require('@img/home/example/1.png')
+          icon: require('@img/home/example/1.png'),
         },
         {
-          icon: require('@img/home/example/2.png')
+          icon: require('@img/home/example/2.png'),
         },
         {
-          icon: require('@img/home/example/3.png')
-        }
+          icon: require('@img/home/example/3.png'),
+        },
       ],
       list: [
         {
-          icon: require('@img/home/example/4.png')
+          icon: require('@img/home/example/4.png'),
         },
         {
-          icon: require('@img/home/example/5.png')
+          icon: require('@img/home/example/5.png'),
         },
         {
-          icon: require('@img/home/example/6.png')
+          icon: require('@img/home/example/6.png'),
         },
         {
-          icon: require('@img/home/example/7.png')
+          icon: require('@img/home/example/7.png'),
         },
         {
-          icon: require('@img/home/example/8.png')
+          icon: require('@img/home/example/8.png'),
         },
         {
-          icon: require('@img/home/example/9.png')
+          icon: require('@img/home/example/9.png'),
         },
         {
-          icon: require('@img/home/example/10.png')
+          icon: require('@img/home/example/10.png'),
         },
         {
-          icon: require('@img/home/example/11.png')
+          icon: require('@img/home/example/11.png'),
         },
         {
-          icon: require('@img/home/example/12.png')
+          icon: require('@img/home/example/12.png'),
         },
         {
-          icon: require('@img/home/example/13.png')
+          icon: require('@img/home/example/13.png'),
         },
         {
-          icon: require('@img/home/example/14.png')
+          icon: require('@img/home/example/14.png'),
         },
         {
-          icon: require('@img/home/example/15.png')
+          icon: require('@img/home/example/15.png'),
         },
         {
-          icon: require('@img/home/example/16.png')
+          icon: require('@img/home/example/16.png'),
         },
         {
-          icon: require('@img/home/example/17.png')
+          icon: require('@img/home/example/17.png'),
         },
         {
-          icon: require('@img/home/example/18.png')
-        }
-      ]
+          icon: require('@img/home/example/18.png'),
+        },
+      ],
     };
   },
   computed: {},
@@ -92,10 +92,10 @@ export default {
     handleItem(item) {
       this.$notification.error({
         message: '正在开发中',
-        description: '点击会跳转到对应的新闻详情，暂时来不及完善'
+        description: '点击会跳转到对应的新闻详情，暂时来不及完善',
       });
-    }
-  }
+    },
+  },
 };
 </script>
 
