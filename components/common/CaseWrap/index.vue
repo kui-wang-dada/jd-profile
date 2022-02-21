@@ -1,7 +1,7 @@
 <template>
   <section class="case-wrap section-wrap">
     <div class="top-wrap">
-      <h3>留学成功案例</h3>
+      <h3>项目经历</h3>
       <img class="icon-list" src="@img/common/icon-list.png" alt="" />
     </div>
     <div class="con-main-wrap">
@@ -25,12 +25,12 @@ export default {
   props: {
     conObj: {
       default: () => ({}),
-      type: Object
+      type: Object,
     },
     hasFilter: {
       default: false,
-      type: Boolean
-    }
+      type: Boolean,
+    },
   },
   data() {
     return {
@@ -43,9 +43,9 @@ export default {
         '美国大学开除应对',
         '英澳加开除应对',
         '学术辅导',
-        '求职规划'
+        '求职规划',
       ],
-      selectedTags: []
+      selectedTags: [],
     };
   },
   computed: {},
@@ -56,8 +56,8 @@ export default {
     handleChange() {},
     goToCase() {
       this.$router.push('/trust/case');
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="wrap section-wrap">
     <div class="top-wrap">
-      <h3>权威认证+媒体报道</h3>
+      <h3>线上链接</h3>
 
       <img class="icon-list" src="@img/home/icon-list.png" alt="" />
     </div>
