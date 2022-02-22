@@ -1,9 +1,10 @@
 /** @format */
 import { typeList, teamList, newsType, serviceList } from '@/assets/mock/common';
-import { tabList } from '@/utils';
+import { tabList, projectList } from '@/utils';
 export default {
   state: () => ({
     tabList,
+    projectList,
     typeList,
     teamList,
     newsType,
@@ -13,6 +14,9 @@ export default {
     // 设置用户信息
     SET_TAB_LIST: (state, data) => {
       state.tabList = data;
+    },
+    SET_PROJECT_LIST: (state, data) => {
+      state.projectList = data;
     },
     SET_TYPE_LIST: (state, data) => {
       state.typeList = data;

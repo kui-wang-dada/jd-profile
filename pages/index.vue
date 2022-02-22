@@ -10,8 +10,7 @@
 </template>
 
 <script>
-import { TopBanner, Website, Example } from '@/components/home';
-import { CaseWrap } from '@/components/common';
+import { TopBanner, Website, Example, CaseWrap } from '@/components/home';
 export default {
   components: { TopBanner, Website, Example, CaseWrap },
   props: {},

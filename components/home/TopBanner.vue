@@ -5,7 +5,11 @@
         <img class="bg" src="@img/home/banner.png" alt="" />
         <div class="item-con">
           <h3>{{ item.title }}</h3>
-          <h5>{{ item.label }}</h5>
+          <h5>{{ item.label1 }}</h5>
+          <h5>{{ item.label2 }}</h5>
+          <h5>{{ item.label3 }}</h5>
+          <h5>{{ item.label4 }}</h5>
+          <h5>{{ item.label5 }}</h5>
         </div>
       </div>
     </a-carousel>
@@ -21,8 +25,13 @@ export default {
       list: [
         {
           title: '王逵',
-          label:
-            '美国厚仁教育集团总部位于宾州匹兹堡，分办公室遍布全美各大城市，主营业务集美国初/高中 留学申请 及转学、紧急学术应对、美国本科/研究生申请和转学、学术辅导、美国寄宿家庭服务、前50美国名校保录、背景提升和职业规划等于一体，是全美首家荣获 AIRC权威认证 的留学生综合教育集团。',
+          label1:
+            '2014年毕业于华中农业大学，毕业后去乡镇事业单位从事基层党政工作一年半，期间自学java，前端等知识，于2016年10月转行',
+          label2: '先后经历云里服务（一年），悠然一指（一年），科大讯飞（一年），厚仁服务（三年至今）',
+          label3:
+            '期间有生产项目的技术栈有：vue，小程序原生，react-native，egret小游戏，cordova，flutter，taro，uniapp，react+formily等',
+          label4: '同时自学了node，java sprint boot，golang等后端语言',
+          label5: '期待同行！！',
         },
       ],
     };
@@ -80,8 +89,7 @@ export default {
             text-align: left;
           }
           h5 {
-            font-size: 18px;
-            font-weight: 400;
+            font-size: 20px;
             color: #ffffff;
             text-align: left;
           }

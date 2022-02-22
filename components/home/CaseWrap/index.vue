@@ -5,7 +5,7 @@
       <img class="icon-list" src="@img/common/icon-list.png" alt="" />
     </div>
     <div class="con-main-wrap">
-      <div v-if="hasFilter" class="case-filter">
+      <div class="case-filter">
         <CaseFilter></CaseFilter>
       </div>
       <div class="case-list">
@@ -26,10 +26,6 @@ export default {
     conObj: {
       default: () => ({}),
       type: Object,
-    },
-    hasFilter: {
-      default: false,
-      type: Boolean,
     },
   },
   data() {
@@ -69,7 +65,6 @@ export default {
   .con-main-wrap {
     margin-top: 40px;
 
-    .flex-col;
     .case-filter {
       margin-bottom: 20px;
     }
