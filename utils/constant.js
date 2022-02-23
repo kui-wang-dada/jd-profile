@@ -97,8 +97,20 @@ const projectList = [
     label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
   },
   {
+    name: '教师成长档案',
+    stack: ['vue'],
+    type: ['网站'],
+    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+  },
+  {
+    name: '音乐播放器',
+    stack: ['vue'],
+    type: ['网站'],
+    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+  },
+  {
     name: 'Nw实现桌面程序',
-    stack: ['vue', 'nuxt'],
+    stack: ['nw'],
     type: ['电脑桌面程序'],
     label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
   },
