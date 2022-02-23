@@ -6,7 +6,7 @@
         <a-checkable-tag
           v-for="typeItem in typeList"
           :key="typeItem"
-          :checked="typeCheck.includes(typeItem)"
+          :checked="filter.typeCheck.includes(typeItem)"
           @change="checked => changeType(checked, typeItem)"
         >
           {{ typeItem }}
@@ -19,7 +19,7 @@
         <a-checkable-tag
           v-for="stackItem in stackList"
           :key="stackItem"
-          :checked="stackCheck.includes(stackItem)"
+          :checked="filter.stackCheck.includes(stackItem)"
           @change="checked => changeStack(checked, stackItem)"
         >
           {{ stackItem }}
@@ -33,12 +33,14 @@
 import { mapState } from 'vuex';
 export default {
   components: {},
-  props: {},
+  props: {
+    filter: {
+      type: Object,
+      default: () => ({ stackCheck: [], typeCheck: [] }),
+    },
+  },
   data() {
-    return {
-      stackCheck: [],
-      typeCheck: [],
-    };
+    return {};
   },
   computed: {
     ...mapState('common', ['projectList']),
@@ -65,27 +67,32 @@ export default {
   methods: {
     changeType(checked, item) {
       console.log(checked, item);
+      let typeCheck = [...this.filter.typeCheck];
       if (checked) {
-        this.typeCheck = [...this.typeCheck, item];
+        typeCheck = [...typeCheck, item];
       } else {
-        const index = this.typeCheck.findIndex(type => type === item);
-        this.typeCheck.splice(index, 1);
+        const index = typeCheck.findIndex(type => type === item);
+        typeCheck.splice(index, 1);
+
         // const data = this.typeCheck;
         // data.splice(index, 1);
         // this.typeCheck = data;
       }
+      this.$emit('changeFilter', { stackCheck: this.filter.stackCheck, typeCheck });
     },
     changeStack(checked, item) {
       console.log(checked, item);
+      let stackCheck = [...this.filter.stackCheck];
       if (checked) {
-        this.stackCheck = [...this.stackCheck, item];
+        stackCheck = [...stackCheck, item];
       } else {
-        const index = this.stackCheck.findIndex(stack => stack === item);
-        this.stackCheck.splice(index, 1);
+        const index = stackCheck.findIndex(stack => stack === item);
+        stackCheck.splice(index, 1);
         // const data = this.typeCheck;
         // data.splice(index, 1);
         // this.typeCheck = data;
       }
+      this.$emit('changeFilter', { typeCheck: this.filter.typeCheck, stackCheck });
     },
   },
 };

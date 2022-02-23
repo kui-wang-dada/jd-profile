@@ -30,13 +30,14 @@ export default {
   loading: { color: '#1064fb' },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['ant-design-vue/dist/antd.css', 'assets/css/index.less'],
+  css: ['ant-design-vue/dist/antd.css', 'swiper/css/swiper.css', 'assets/css/index.less'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/antd-ui',
     { src: '@/plugins/i18n.js', ssr: true },
     { src: '@/plugins/vue-persist.js', ssr: false },
+    { src: '@/plugins/swiper.js', ssr: false },
     { src: '@/plugins/wow.js', ssr: false },
     '@/plugins/utils',
   ],

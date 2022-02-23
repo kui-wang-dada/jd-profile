@@ -6,10 +6,10 @@
     </div>
     <div class="con-main-wrap">
       <div class="case-filter">
-        <CaseFilter></CaseFilter>
+        <CaseFilter :filter="filter" @changeFilter="changeFilter"></CaseFilter>
       </div>
       <div class="case-list">
-        <CaseList></CaseList>
+        <CaseList :filter="filter"></CaseList>
       </div>
 
       <a-button type="primary" size="large" @click="goToCase">查看更多成功案例</a-button>
@@ -22,26 +22,13 @@ import CaseFilter from './CaseFilter';
 import CaseList from './CaseList';
 export default {
   components: { CaseFilter, CaseList },
-  props: {
-    conObj: {
-      default: () => ({}),
-      type: Object,
-    },
-  },
+  props: {},
   data() {
     return {
-      tags: [
-        '初高中申请',
-        '本科申请',
-        '研究生申请',
-        '名校申请',
-        '社大申请',
-        '美国大学开除应对',
-        '英澳加开除应对',
-        '学术辅导',
-        '求职规划',
-      ],
-      selectedTags: [],
+      filter: {
+        stackCheck: [],
+        typeCheck: [],
+      },
     };
   },
   computed: {},
@@ -52,6 +39,9 @@ export default {
     handleChange() {},
     goToCase() {
       this.$router.push('/trust/case');
+    },
+    changeFilter(filter) {
+      this.filter = filter;
     },
   },
 };
