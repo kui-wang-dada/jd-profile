@@ -49,7 +49,7 @@ export default {
       this.projectList.forEach(item => {
         list = [...list, ...item.stack];
       });
-      list = [...new Set(list)];
+      list = ['全部', ...new Set(list)];
       return list;
     },
     typeList() {
@@ -57,7 +57,7 @@ export default {
       this.projectList.forEach(item => {
         list = [...list, ...item.type];
       });
-      list = [...new Set(list)];
+      list = ['全部', ...new Set(list)];
       return list;
     },
   },
@@ -67,6 +67,11 @@ export default {
   methods: {
     changeType(checked, item) {
       console.log(checked, item);
+      if (item === '全部') {
+        const typeList = checked ? this.typeList : [];
+        this.$emit('changeFilter', { stackCheck: this.filter.stackCheck, typeCheck: typeList });
+        return;
+      }
       let typeCheck = [...this.filter.typeCheck];
       if (checked) {
         typeCheck = [...typeCheck, item];
@@ -82,6 +87,11 @@ export default {
     },
     changeStack(checked, item) {
       console.log(checked, item);
+      if (item === '全部') {
+        const stackList = checked ? this.stackList : [];
+        this.$emit('changeFilter', { typeCheck: this.filter.typeCheck, stackCheck: stackList });
+        return;
+      }
       let stackCheck = [...this.filter.stackCheck];
       if (checked) {
         stackCheck = [...stackCheck, item];

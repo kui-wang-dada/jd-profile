@@ -2,24 +2,26 @@
   <div class="case-list-wrap">
     <a-list :grid="{ gutter: 24, xs: 1, sm: 2, md: 3, lg: 3, xl: 3, xxl: 3 }" :data-source="list">
       <a-list-item slot="renderItem" slot-scope="item">
-        <a-card hoverable class="card">
-          <img slot="cover" class="card-thumb" alt="example" :src="item.thumb" />
-          <template slot="actions">
-            <a-icon key="appstore" type="appstore" @click="clickItem(item)" />
-          </template>
-          <a-card-meta :title="item.name" :description="item.label"> </a-card-meta>
-          <div class="type-wrap">
-            <span>项目分类：</span>
-            <a-tag v-for="tag in item.type" :key="tag" color="red">{{ tag }}</a-tag>
-          </div>
-          <div class="stack-wrap">
-            <span>技术栈分类：</span>
-            <a-tag v-for="tag in item.stack" :key="tag" color="green">{{ tag }}</a-tag>
+        <a-card hoverable class="card" @click="clickItem(item)">
+          <div class="card-wrap">
+            <img slot="cover" class="card-thumb" alt="example" :src="item.thumb" />
+            <div class="card-con">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.label }}</p>
+              <div class="type-wrap">
+                <span>项目分类：</span>
+                <a-tag v-for="tag in item.type" :key="tag" color="red">{{ tag }}</a-tag>
+              </div>
+              <div class="stack-wrap">
+                <span>技术栈分类：</span>
+                <a-tag v-for="tag in item.stack" :key="tag" color="green">{{ tag }}</a-tag>
+              </div>
+            </div>
           </div>
         </a-card>
       </a-list-item>
     </a-list>
-    <a-modal v-model="visible" width="80%" :title="activeItem.name" ok-text="确认" cancel-text="取消" @ok="hideModal">
+    <a-modal v-model="visible" width="70%" :title="activeItem.name" ok-text="确认" cancel-text="取消" @ok="hideModal">
       <div>
         <a-descriptions title="项目介绍">
           <a-descriptions-item label="开发周期"> Zhou Maomao </a-descriptions-item>
@@ -99,6 +101,7 @@ export default {
       if (!this.filter.stackCheck.length && !this.filter.typeCheck.length) {
         return this.projectList;
       }
+
       let list = [];
       const stackArr = this.projectList.filter(item => {
         return this.filter.stackCheck.some(item_ => {
@@ -144,16 +147,24 @@ export default {
 <style scoped lang="less">
 .case-list-wrap {
   .card {
-    .card-thumb {
-      width: 100%;
-      height: 300px;
-      object-fit: contain;
+    /deep/ .ant-card-body {
+      padding: 0;
     }
-    .type-wrap {
-      margin-top: 10px;
-    }
-    .stack-wrap {
-      margin-top: 10px;
+    .card-wrap {
+      .flex-row;
+      .card-thumb {
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
+      }
+      .card-con {
+        .type-wrap {
+          margin-top: 10px;
+        }
+        .stack-wrap {
+          margin-top: 10px;
+        }
+      }
     }
   }
 }

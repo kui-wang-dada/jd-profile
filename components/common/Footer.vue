@@ -50,21 +50,21 @@ export default {
       contact: [
         {
           icon: 'icon-phone_circle',
-          title: '美国拨打：+1 (412) 756-3137'
+          title: '美国拨打：+1 (412) 756-3137',
         },
         {
           icon: 'icon-phone_circle',
-          title: '中国拨打：+86 (010) 5387-5758'
+          title: '中国拨打：+86 (010) 5387-5758',
         },
         {
           icon: 'icon-email-circle',
-          title: '邮件：info@wholeren.com'
+          title: '邮件：info@wholeren.com',
         },
         {
           icon: 'icon-wechat-circle',
-          title: '微信客服： wholerenguru5 （厚仁学术哥）'
-        }
-      ]
+          title: '微信客服： wholerenguru5 （厚仁学术哥）',
+        },
+      ],
     };
   },
   computed: {
@@ -77,19 +77,19 @@ export default {
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '美国校园排名网',
-              link: ''
+              link: '',
             },
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '美国校园资讯网',
-              link: ''
+              link: '',
             },
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '厚仁知道论坛',
-              link: ''
-            }
-          ]
+              link: '',
+            },
+          ],
         },
         {
           title: '转学与辅导',
@@ -97,19 +97,19 @@ export default {
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '美国转学录取中心',
-              link: ''
+              link: '',
             },
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '辅道教育',
-              link: ''
+              link: '',
             },
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '美国高校高考招生联盟',
-              link: ''
-            }
-          ]
+              link: '',
+            },
+          ],
         },
         {
           title: '寄宿',
@@ -117,14 +117,14 @@ export default {
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '美寄宿',
-              link: ''
+              link: '',
             },
             {
               icon: require('@img/home/icon-tab2.png'),
               title: '寄宿家庭服务中心',
-              link: ''
-            }
-          ]
+              link: '',
+            },
+          ],
         },
         {
           title: '求职和人工智能',
@@ -132,33 +132,33 @@ export default {
             {
               icon: require('@img/home/icon-tab2.png'),
               title: 'Jobupper职尚行',
-              link: ''
+              link: '',
             },
             {
               icon: require('@img/home/icon-tab2.png'),
               title: 'ReadyAI',
-              link: ''
-            }
-          ]
-        }
+              link: '',
+            },
+          ],
+        },
       ];
     },
     linkList() {
       return [
         {
           title: 'Website',
-          con: this.tabList.map(item => ({ title: item.tab.title }))
+          con: this.tabList.map(item => ({ title: item.title })),
         },
         {
           title: 'Before Abroad',
-          con: this.serviceList.filter(item => item.type === 'before')
+          con: this.serviceList.filter(item => item.type === 'before'),
         },
         {
           title: 'After Abroad',
-          con: this.serviceList.filter(item => item.type === 'after')
-        }
+          con: this.serviceList.filter(item => item.type === 'after'),
+        },
       ];
-    }
+    },
   },
   watch: {},
   created() {},
@@ -167,16 +167,16 @@ export default {
     handleContact(item) {
       this.$notification.error({
         message: '正在开发中',
-        description: '点击会复制，'
+        description: '点击会复制，',
       });
     },
     handleLink(item) {
       this.$notification.error({
         message: '正在开发中',
-        description: '点击会跳转'
+        description: '点击会跳转',
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

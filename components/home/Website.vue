@@ -10,18 +10,17 @@
       <a-tab-pane v-for="item in tabList" :key="item.name">
         <span slot="tab">
           <div class="tab-head">
-            <img :src="item.tab.icon" />
-            <p>{{ item.tab.title }}</p>
+            <img :src="item.icon" />
+            <p>{{ item.title }}</p>
           </div>
         </span>
         <div class="tab-con">
           <div class="tab-left">
-            <img class="logo" :src="item.tab.logo" alt="" />
-            <h4>{{ item.tab.title }}</h4>
-            <h6>{{ item.tab.label }}</h6>
-            <a-button @click="goTo(item)"> 产品介绍<a-icon type="arrow-right" /> </a-button>
+            <img class="logo" :src="item.logo" alt="" />
+            <h4>{{ item.title }}</h4>
+            <h6>{{ item.label }}</h6>
           </div>
-          <img class="img-con" :src="item.tab.con" alt="" />
+          <img class="img-con" :src="item.con" alt="" />
         </div>
       </a-tab-pane>
     </a-tabs>

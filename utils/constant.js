@@ -1,20 +1,28 @@
 const tabList = [
   {
-    name: 'rank',
-
-    tab: {
-      title: '厚仁教育',
-      label: '前端负责人，app项目负责人，小程序集群负责人',
-    },
-    banner: {
-      title: '厚仁教育',
-      label: '前端负责人，app项目负责人，小程序集群负责人',
-      link: 'https://school.wholeren.cn/',
-    },
-    intro: {
-      title: '美国校园排名网简介',
-      con: `查看2022USNEWS 最新美国大学排名，Top300美国大学介绍，以及美国大学申请/转学数据`,
-    },
+    name: 'wholeren',
+    icon: require('@/assets/img/work/wholeren/logo.png'),
+    title: '厚仁教育',
+    label: '前端负责人，app项目负责人，小程序集群负责人',
+    con: [],
+  },
+  {
+    name: 'xunfei',
+    icon: require('@/assets/img/work/xunfei/logo.png'),
+    title: '科大讯飞',
+    label: '前端负责人，app项目负责人，小程序集群负责人',
+  },
+  {
+    name: 'yryz',
+    icon: require('@/assets/img/work/yryz/logo.png'),
+    title: '悠然一指',
+    label: '前端负责人，app项目负责人，小程序集群负责人',
+  },
+  {
+    name: 'yunli',
+    icon: require('@/assets/img/work/yunli/logo.png'),
+    title: '云里服务',
+    label: '前端负责人，app项目负责人，小程序集群负责人',
   },
 ];
 const projectList = [
