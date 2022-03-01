@@ -4,7 +4,7 @@
       <a-list-item slot="renderItem" slot-scope="item">
         <a-card hoverable class="card" @click="clickItem(item)">
           <div class="card-wrap">
-            <img slot="cover" class="card-thumb" alt="example" :src="item.thumb" />
+            <img class="card-thumb" alt="example" :src="item.thumb" />
             <div class="card-con">
               <h3>{{ item.name }}</h3>
               <p>{{ item.label }}</p>
@@ -156,8 +156,14 @@ export default {
         width: 200px;
         height: 200px;
         object-fit: contain;
+        margin-right: 10px;
       }
       .card-con {
+        h3 {
+          font-size: 16px;
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
         .type-wrap {
           margin-top: 10px;
         }

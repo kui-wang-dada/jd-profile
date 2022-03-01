@@ -15,12 +15,16 @@
           </div>
         </span>
         <div class="tab-con">
-          <div class="tab-left">
-            <img class="logo" :src="item.logo" alt="" />
+          <div class="tab-top">
             <h4>{{ item.title }}</h4>
+            <h6>工作时间:{{ item.time }}</h6>
             <h6>{{ item.label }}</h6>
           </div>
-          <img class="img-con" :src="item.con" alt="" />
+          <div class="tab-con-main">
+            <a-table style="background: #fff" :columns="columns" :data-source="item.con">
+              <span slot="index" slot-scope="text, record, index">{{ index + 1 }}</span>
+            </a-table>
+          </div>
         </div>
       </a-tab-pane>
     </a-tabs>
@@ -33,7 +37,31 @@ export default {
   components: {},
   props: {},
   data() {
-    return {};
+    return {
+      columns: [
+        {
+          title: '序号',
+          scopedSlots: { customRender: 'index' },
+        },
+        {
+          title: '板块名称',
+          dataIndex: 'name',
+        },
+
+        {
+          title: '负责',
+          dataIndex: 'duty',
+        },
+        {
+          title: '技术栈',
+          dataIndex: 'stack',
+        },
+        {
+          title: '难点',
+          dataIndex: 'hard',
+        },
+      ],
+    };
   },
   computed: {
     ...mapState('common', ['tabList']),
@@ -82,12 +110,12 @@ export default {
     }
 
     .tab-con {
-      height: 550px;
       background: url('~@img/home/product/bg.png');
       background-size: 100% 100%;
-      .flex-row;
-      .tab-left {
-        width: 500px;
+      .flex-col;
+      justify-content: flex-start;
+      .tab-top {
+        .flex-col;
         .logo {
           height: 60px;
         }
@@ -103,22 +131,16 @@ export default {
           font-weight: 400;
           color: #333333;
         }
-        .ant-btn {
-          margin-top: 40px;
-          width: 146px;
-          height: 50px;
-          background: linear-gradient(335deg, #0c5afc 0%, #1c93fe 100%);
-          box-shadow: 0px 2px 12px 0px rgba(12, 90, 252, 0.28);
-          border-radius: 4px;
-          font-size: 16px;
-          font-weight: 400;
-          color: #ffffff;
-        }
       }
-      .img-con {
-        margin-left: 80px;
-        width: 550px;
-        height: auto;
+      .tab-con-main {
+        width: 1200px;
+        margin: 0 auto;
+
+        margin-top: 40px;
+        margin-bottom: 40px;
+        div {
+          margin-top: 10px;
+        }
       }
     }
   }
