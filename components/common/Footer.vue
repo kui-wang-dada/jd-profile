@@ -1,23 +1,11 @@
 <template>
   <div class="wrap">
     <div class="con-main-wrap">
-      <div class="contact-wrap">
-        <div v-for="(item, index) in contact" :key="index" class="contact-item" @click="handleContact(item)">
-          <i :class="[`iconfont ${item.icon}`]" alt="" />
-          <div class="con-wrap">
-            <h4>{{ item.title }}</h4>
-            <p v-if="item.label">{{ item.label }}</p>
-          </div>
-        </div>
-      </div>
       <div class="link-wrap">
         <div class="left-wrap">
           <div v-for="webType in majorList" :key="webType.title" class="left-item">
             <h3>{{ webType.title }}</h3>
-            <div v-for="web in webType.con" :key="web.title" class="web-item" @click="handleLink(web)">
-              <img :src="web.icon" alt="" />
-              <p>{{ web.title }}</p>
-            </div>
+            <img :src="webType.icon" alt="" />
           </div>
         </div>
         <div class="right-wrap">
@@ -26,7 +14,11 @@
               <h3>{{ linkWrap.title }}</h3>
               <div class="section-con">
                 <div v-for="(link, index) in linkWrap.con" :key="index" class="link-item" @click="handleLink(link)">
-                  <p>{{ link.title }}</p>
+                  <a v-if="link.link" :href="link.link">{{ link.title }}</a>
+                  <div v-else>
+                    <span>{{ link.title }}：</span>
+                    <span>{{ link.value }}</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -34,9 +26,9 @@
         </div>
       </div>
     </div>
-    <div class="copyright">
+    <!-- <div class="copyright">
       <p>Copyright © 2000 - 2021 美国厚仁教育. All Rights Reserved. 美国厚仁教育 版权所有</p>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -46,116 +38,44 @@ export default {
   components: {},
   props: {},
   data() {
-    return {
-      contact: [
-        {
-          icon: 'icon-phone_circle',
-          title: '美国拨打：+1 (412) 756-3137',
-        },
-        {
-          icon: 'icon-phone_circle',
-          title: '中国拨打：+86 (010) 5387-5758',
-        },
-        {
-          icon: 'icon-email-circle',
-          title: '邮件：info@wholeren.com',
-        },
-        {
-          icon: 'icon-wechat-circle',
-          title: '微信客服： wholerenguru5 （厚仁学术哥）',
-        },
-      ],
-    };
+    return {};
   },
   computed: {
     ...mapState('common', ['tabList', 'serviceList']),
     majorList() {
       return [
         {
-          title: '校园排名和资讯',
-          con: [
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '美国校园排名网',
-              link: '',
-            },
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '美国校园资讯网',
-              link: '',
-            },
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '厚仁知道论坛',
-              link: '',
-            },
-          ],
+          title: '前端自学社区联盟（公众号）',
+          icon: require('@img/common/qrcode-1.png'),
         },
         {
-          title: '转学与辅导',
-          con: [
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '美国转学录取中心',
-              link: '',
-            },
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '辅道教育',
-              link: '',
-            },
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '美国高校高考招生联盟',
-              link: '',
-            },
-          ],
-        },
-        {
-          title: '寄宿',
-          con: [
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '美寄宿',
-              link: '',
-            },
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: '寄宿家庭服务中心',
-              link: '',
-            },
-          ],
-        },
-        {
-          title: '求职和人工智能',
-          con: [
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: 'Jobupper职尚行',
-              link: '',
-            },
-            {
-              icon: require('@img/home/icon-tab2.png'),
-              title: 'ReadyAI',
-              link: '',
-            },
-          ],
+          title: 'web前端自学社区（小程序）',
+          icon: require('@img/common/qrcode-2.png'),
         },
       ];
     },
     linkList() {
       return [
         {
-          title: 'Website',
-          con: this.tabList.map(item => ({ title: item.title })),
-        },
-        {
-          title: 'Before Abroad',
-          con: this.serviceList.filter(item => item.type === 'before'),
-        },
-        {
-          title: 'After Abroad',
-          con: this.serviceList.filter(item => item.type === 'after'),
+          title: '相关信息',
+          con: [
+            {
+              title: '微信号',
+              value: 'wangkui125',
+            },
+            {
+              title: '手机号',
+              value: '13100671550',
+            },
+            {
+              title: '城市',
+              value: '湖北武汉',
+            },
+            {
+              title: 'github',
+              link: 'https://github.com/wangkui1991',
+            },
+          ],
         },
       ];
     },
@@ -216,17 +136,19 @@ export default {
       width: 100%;
       padding: 30px 0;
       h3 {
+        font-size: 18px;
         color: #bfbfc0;
         margin-bottom: 20px;
       }
       .flex-row;
       align-items: flex-start;
+      justify-content: space-between;
       color: #fff;
       .left-wrap {
         width: 50%;
         .flex-row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+
         margin-right: 100px;
 
         .left-item {
@@ -235,20 +157,10 @@ export default {
           margin-right: 80px;
           margin-bottom: 80px;
 
-          .web-item {
-            .flex-row;
-            justify-content: flex-start;
-            margin-bottom: 20px;
-            cursor: pointer;
-            img {
-              width: 30px;
-              height: 30px;
-              margin-right: 10px;
-              border-radius: 15px;
-            }
-            p {
-              font-size: 20px;
-            }
+          img {
+            width: 250px;
+            height: 80px;
+            margin-right: 10px;
           }
         }
       }
@@ -260,11 +172,9 @@ export default {
             margin-right: 60px;
             .section-con {
               .link-item {
+                font-size: 16px;
                 margin-bottom: 10px;
                 cursor: pointer;
-                p {
-                  font-size: 16px;
-                }
               }
             }
           }

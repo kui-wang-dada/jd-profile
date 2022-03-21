@@ -4,7 +4,7 @@
       <a-list-item slot="renderItem" slot-scope="item">
         <a-card hoverable class="card" @click="clickItem(item)">
           <div class="card-wrap">
-            <img class="card-thumb" alt="example" :src="item.thumb" />
+            <!-- <img class="card-thumb" alt="example" :src="item.thumb" /> -->
             <div class="card-con">
               <h3>{{ item.name }}</h3>
               <p>{{ item.label }}</p>
@@ -17,6 +17,7 @@
                 <a-tag v-for="tag in item.stack" :key="tag" color="green">{{ tag }}</a-tag>
               </div>
             </div>
+            <div class="bg" :style="{ backgroundImage: `url(${item.thumb})` }"></div>
           </div>
         </a-card>
       </a-list-item>
@@ -152,15 +153,28 @@ export default {
     }
     .card-wrap {
       .flex-row;
-      .card-thumb {
-        width: 200px;
-        height: 200px;
-        object-fit: contain;
-        margin-right: 10px;
+      position: relative;
+      width: 450px;
+      height: 250px;
+      .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 60%;
+        bottom: 0;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        filter: blur(1px) brightness(90%);
+        color: #fff;
       }
+
       .card-con {
+        z-index: 1;
+        padding-left: 42%;
+        padding-right: 2%;
         h3 {
-          font-size: 16px;
+          font-size: 18px;
           margin-bottom: 5px;
           font-weight: bold;
         }

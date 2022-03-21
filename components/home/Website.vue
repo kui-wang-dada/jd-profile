@@ -21,7 +21,7 @@
             <h6>{{ item.label }}</h6>
           </div>
           <div class="tab-con-main">
-            <a-table style="background: #fff" :columns="columns" :data-source="item.con">
+            <a-table rowKey="name" style="background: #fff" :columns="columns" :data-source="item.con">
               <span slot="index" slot-scope="text, record, index">{{ index + 1 }}</span>
             </a-table>
           </div>

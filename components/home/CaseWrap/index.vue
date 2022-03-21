@@ -11,8 +11,6 @@
       <div class="case-list">
         <CaseList :filter="filter"></CaseList>
       </div>
-
-      <a-button type="primary" size="large" @click="goToCase">查看更多成功案例</a-button>
     </div>
   </section>
 </template>
@@ -37,9 +35,7 @@ export default {
   mounted() {},
   methods: {
     handleChange() {},
-    goToCase() {
-      this.$router.push('/trust/case');
-    },
+
     changeFilter(filter) {
       this.filter = filter;
     },
