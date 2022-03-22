@@ -26,9 +26,10 @@
         </div>
       </div>
     </div>
-    <!-- <div class="copyright">
-      <p>Copyright © 2000 - 2021 美国厚仁教育. All Rights Reserved. 美国厚仁教育 版权所有</p>
-    </div> -->
+    <div class="copyright">
+      <p>Copyright © 王逵 版权所有</p>
+      <p>备案号：鄂ICP备18009297号</p>
+    </div>
   </div>
 </template>
 
@@ -183,7 +184,7 @@ export default {
     }
   }
   .copyright {
-    .flex-row;
+    .flex-col;
     width: 100%;
     height: 60px;
     border-top: 1px solid #465471;

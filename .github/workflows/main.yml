@@ -6,9 +6,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,3 +34,14 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      # 发布到阿里云
+      - name: Deploy to aliyun server
+        uses: easingthemes/ssh-deploy@v2.1.5 #可以访问的仓库，实现的上传服务器步骤被封装在此action
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }} #这个是阿里云的私钥
+          ARGS: '-avzr --delete'
+          SOURCE: './'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }} #阿里云的 ip
+          REMOTE_USER: ${{ secrets.REMOTE_USER }} #阿里云用户
+          TARGET: '/home/static/nuxt' #被部署的服务器路径
+

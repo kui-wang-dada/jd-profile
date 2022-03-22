@@ -174,7 +174,7 @@ export default {
         padding-left: 42%;
         padding-right: 2%;
         h3 {
-          font-size: 18px;
+          font-size: 16px;
           margin-bottom: 5px;
           font-weight: bold;
         }

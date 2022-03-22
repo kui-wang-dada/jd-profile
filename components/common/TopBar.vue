@@ -65,6 +65,7 @@ export default {
         {
           title: '相关博客',
           name: 'blog',
+          link: 'http://www.dadafastrun.com/blog/',
         },
       ],
     };
@@ -121,7 +122,8 @@ export default {
       this.activeIndex = activeIndex;
     },
     goTo(item, index) {
-      if (item.name === 'blog') {
+      if (item.link) {
+        window.open(item.link);
         return;
       }
       this.activeIndex = index;
