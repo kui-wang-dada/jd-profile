@@ -40,8 +40,8 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }} #这个是阿里云的私钥
           ARGS: '-avzr --delete'
-          SOURCE: '/'
+          SOURCE: 'jd-profile/'
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }} #阿里云的 ip
           REMOTE_USER: ${{ secrets.REMOTE_USER }} #阿里云用户
-          TARGET: '/home/static/nuxt' #被部署的服务器路径
+          TARGET: '/home/static/nuxt/jd-profile' #被部署的服务器路径
 
