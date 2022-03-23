@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16.x
           cache: 'npm'
-      - run: npm init
+      - run: npm run init
       - run: npm run generate --if-present
 
       # 发布到阿里云
