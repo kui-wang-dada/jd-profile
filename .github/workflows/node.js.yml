@@ -5,13 +5,12 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,22 +19,22 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npm run build --if-present
-    - run: npm test
-    # 发布到阿里云
-    - name: Deploy to aliyun server
-      uses: easingthemes/ssh-deploy@v2.1.5 #可以访问的仓库，实现的上传服务器步骤被封装在此action
-      env:
-        SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }} #这个是阿里云的私钥
-        ARGS: '-avzr --delete'
-        SOURCE: 'jd-profile/'
-        REMOTE_HOST: ${{ secrets.REMOTE_HOST }} #阿里云的 ip
-        REMOTE_USER: ${{ secrets.REMOTE_USER }} #阿里云用户
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run generate --if-present
+
+      # 发布到阿里云
+      - name: Deploy to aliyun server
+        uses: easingthemes/ssh-deploy@v2.1.5 #可以访问的仓库，实现的上传服务器步骤被封装在此action
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }} #这个是阿里云的私钥
+          ARGS: '-avzr --delete'
+          SOURCE: 'jd-profile/'
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }} #阿里云的 ip
+          REMOTE_USER: ${{ secrets.REMOTE_USER }} #阿里云用户
           TARGET: '/home/static/nuxt/jd-profile' #被部署的服务器路径
