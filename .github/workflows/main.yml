@@ -29,7 +29,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.13.0
+        # npm install
+      - name: npm install
+        run: npm install
+      # build
+      - name: npm build
         run: npm run generate
+
       # 发布到阿里云
       - name: Deploy to aliyun server
         uses: easingthemes/ssh-deploy@v2.1.5 #可以访问的仓库，实现的上传服务器步骤被封装在此action
