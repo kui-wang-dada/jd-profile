@@ -10,7 +10,6 @@
       <a-tab-pane v-for="item in tabList" :key="item.name">
         <span slot="tab">
           <div class="tab-head">
-            <img :src="item.icon" />
             <p>{{ item.title }}</p>
           </div>
         </span>
@@ -99,12 +98,9 @@ export default {
     }
     .tab-head {
       .flex-col;
-      img {
-        width: 80px;
-      }
+
       p {
-        margin-top: 5px;
-        font-size: 16px;
+        font-size: 20px;
         color: #0c5afc;
       }
     }

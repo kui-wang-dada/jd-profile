@@ -5,14 +5,14 @@
 
     <CaseWrap></CaseWrap>
 
-    <Example></Example>
+    <Blog></Blog>
   </div>
 </template>
 
 <script>
-import { TopBanner, Website, Example, CaseWrap } from '@/components/home';
+import { TopBanner, Website, Blog, CaseWrap } from '@/components/home';
 export default {
-  components: { TopBanner, Website, Example, CaseWrap },
+  components: { TopBanner, Website, Blog, CaseWrap },
   props: {},
   data() {
     return {
