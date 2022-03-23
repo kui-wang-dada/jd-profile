@@ -10,7 +10,7 @@
         <h4>个人经历经验</h4>
         <div class="list-wrap">
           <div v-for="item in list1" :key="item.title" class="list-item">
-            <h3>title</h3>
+            <h3>title1</h3>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
         <h4>技术文章笔记</h4>
         <div class="list-wrap">
           <div v-for="item in list2" :key="item.title" class="list-item">
-            <h3>title</h3>
+            <h3>title2</h3>
           </div>
         </div>
       </div>

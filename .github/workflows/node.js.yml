@@ -20,9 +20,11 @@ jobs:
         with:
           node-version: 16.x
           cache: 'npm'
-      - run: npm run init
-      - run: npm run generate --if-present
-
+      - run: npm install -g yarn
+      - name: yarn install, build, and test
+        run: |
+          yarn install
+          yarn generate
       # 发布到阿里云
       - name: Deploy to aliyun server
         uses: easingthemes/ssh-deploy@v2.1.5 #可以访问的仓库，实现的上传服务器步骤被封装在此action
