@@ -59,13 +59,8 @@ export default {
         },
 
         {
-          title: '职业规划+社群',
-          name: 'career',
-        },
-        {
-          title: '相关博客',
+          title: '相关文章',
           name: 'blog',
-          link: 'http://www.dadafastrun.com/blog/',
         },
       ],
     };
