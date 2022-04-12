@@ -1,8 +1,7 @@
 <template>
   <div class="wrap" :class="{ headerChange }">
     <div class="main-wrap">
-      <img v-if="headerChange" class="logo" src="@img/common/logo-blue.png" alt="" />
-      <img v-else class="logo" src="@img/common/logo.png" alt="" />
+      <img class="logo" src="@img/common/logo.png" alt="" />
       <div class="right-wrap">
         <div
           v-for="(item, index) in list"
@@ -184,8 +183,9 @@ export default {
     .flex-row();
     justify-content: space-between;
     .logo {
-      width: 141px;
-      height: 33px;
+      width: 60px;
+      height: 50px;
+      border-radius: 25px;
     }
     .right-wrap {
       .flex-row();

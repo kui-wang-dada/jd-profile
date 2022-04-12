@@ -16,12 +16,16 @@
         <div class="tab-con">
           <div class="tab-top">
             <h4>{{ item.title }}</h4>
-            <h6>工作时间:{{ item.time }}</h6>
-            <h6>{{ item.label }}</h6>
+            <h5>工作时间:{{ item.time }}</h5>
+            <h6 v-for="label_ in item.label" :key="label_">{{ label_ }}</h6>
           </div>
           <div class="tab-con-main">
             <a-table rowKey="name" style="background: #fff" :columns="columns" :data-source="item.con">
               <span slot="index" slot-scope="text, record, index">{{ index + 1 }}</span>
+              <template slot="link" slot-scope="text, record">
+                <a v-if="record.detail.link" :href="record.detail.link" target="_blank">{{ record.detail.label }}</a>
+                <span v-else>{{ record.detail.label }}</span>
+              </template>
             </a-table>
           </div>
         </div>
@@ -58,6 +62,10 @@ export default {
         {
           title: '难点',
           dataIndex: 'hard',
+        },
+        {
+          title: '查看详情',
+          scopedSlots: { customRender: 'link' },
         },
       ],
     };
@@ -121,11 +129,17 @@ export default {
           font-weight: 600;
           color: #333333;
         }
-        h6 {
+        h5 {
           margin-top: 12px;
           font-size: 18px;
           font-weight: 400;
           color: #333333;
+        }
+        h6 {
+          margin-top: 5px;
+          font-size: 16px;
+          font-weight: 400;
+          color: #333;
         }
       }
       .tab-con-main {

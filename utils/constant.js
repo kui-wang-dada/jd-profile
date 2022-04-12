@@ -4,32 +4,48 @@ const tabList = [
     icon: require('@/assets/img/work/wholeren/logo.png'),
     title: '厚仁教育',
     time: '2019/3 - 至今',
-    label:
-      '前端负责人，app项目负责人，小程序集群负责人,熟悉技术栈：react(reactnative,taro,next),vue(nuxt,uniapp),flutter，cordova 等',
+    label: [
+      '前端负责人，app项目负责人，小程序集群负责人',
+      '熟悉技术栈：react(reactnative,taro,next),vue(nuxt,uniapp),flutter，cordova 等',
+    ],
     con: [
       {
         name: 'app开发',
         duty: '前端独立开发，项目流程控制',
         stack: 'cordova1.0，ReactNative2.0，flutter3.0(正在策划)',
         hard: '业务对接 / 需求归纳整理 / 架构设计 / 更新策略 / 消息推送 / 测试发布 / 数据埋点 / 微信和指纹登录 / 国际化等',
+        detail: {
+          label: 'google play或者app store搜索厚仁教育',
+        },
       },
       {
         name: 'erp-fits 企业管理系统',
         duty: 'fits 平台前端实现',
         stack: 'react+procomponent+formily',
         hard: 'antdesign 及其周边熟练应用 / 项目分包管理 / formily schema 运用',
+        detail: {
+          label: 'fits平台测试站 https://fitsdev.wholerengroup.com',
+          link: 'https://fitsdev.wholerengroup.com',
+        },
       },
       {
         name: 'C 端网站 重构企业各部门对外网站',
         duty: '对接市场，确定需求，独立开发实现',
         stack: 'nuxt 服务端渲染 / spa+vue',
         hard: 'seo 优化 / 组件封装',
+        detail: {
+          label: '疫情网等相关网站 https://c.wholeren.com/',
+          link: 'https://c.wholeren.com/',
+        },
       },
       {
         name: '小程序集群',
         duty: '探讨需求+前端独立开发',
         stack: '主 Taro 兼 Uniapp',
         hard: '微信功能对接 / 各平台兼容',
+        detail: {
+          label: '厚仁服务，厚仁留学，留美导师，厚仁学生中心，厚仁导师中心等',
+        },
       },
     ],
   },
@@ -38,7 +54,7 @@ const tabList = [
     icon: require('@/assets/img/work/xunfei/logo.png'),
     title: '科大讯飞',
     time: '2018/3 - 2019/3',
-    label: '前期单个项目维护，后期泉山项目群负责人：+项目广度，+Vue 深入理解，+前端小组工作管理',
+    label: ['前期单个项目维护，后期泉山项目群负责人', '+项目广度，+Vue 深入理解，+前端小组工作管理'],
     con: [
       {
         name: 'NW 桌面程序',
@@ -65,7 +81,7 @@ const tabList = [
     icon: require('@/assets/img/work/yryz/logo.png'),
     title: '悠然一指',
     time: '2017/3 - 2018/3',
-    label: '负责App单个模块：+RN，+JS，+Vue，+前端基础',
+    label: ['负责App单个模块,', '+RN，+JS，+Vue，+前端基础'],
     con: [
       {
         name: 'APP 悠然一指 / 圈乎',
@@ -86,7 +102,7 @@ const tabList = [
     icon: require('@/assets/img/work/yunli/logo.png'),
     title: '云里服务',
     time: '2016/10 - 2017/3',
-    label: '入门',
+    label: ['入门'],
     con: [
       {
         name: '微信小程序',
