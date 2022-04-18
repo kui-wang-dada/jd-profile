@@ -1,4 +1,12 @@
 import Vue from 'vue';
-import Antd from 'ant-design-vue';
 
-Vue.use(Antd);
+import { Modal, Dropdown, Menu, Tabs, Tag, List, Card, Descriptions } from 'ant-design-vue';
+
+Vue.use(Modal);
+Vue.use(Dropdown);
+Vue.use(Menu);
+Vue.use(Tabs);
+Vue.use(Tag);
+Vue.use(List);
+Vue.use(Card);
+Vue.use(Descriptions);
