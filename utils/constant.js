@@ -132,6 +132,7 @@ const projectList = [
       require('@/assets/img/project/app/sport/2.png'),
       require('@/assets/img/project/app/sport/3.png'),
     ],
+    con: ['开发周期，', '', ''],
   },
   {
     name: 'RN厚仁教育app',
