@@ -24,7 +24,10 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    script: [{ src: '/js/rem.js', type: 'text/javascript', charset: 'utf-8' }],
+    script: [
+      { src: '/js/rem.js', type: 'text/javascript', charset: 'utf-8' },
+      { src: '/js/init.js', type: 'text/javascript', charset: 'utf-8' },
+    ],
   },
 
   loading: { color: '#1064fb' },
