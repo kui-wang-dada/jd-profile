@@ -91,12 +91,7 @@ export default {
         config.optimization.minimizer[0].options.terserOptions.compress.warnings = false;
       }
     },
-    optimization: {
-      splitChunks: {
-        minSize: 10000,
-        maxSize: 250000,
-      },
-    },
+
     loaders: {
       less: {
         lessOptions: {
