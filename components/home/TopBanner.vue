@@ -1,7 +1,7 @@
 <template>
   <div class="wrap section-wrap">
     <div class="con-wrap">
-      <img class="bg" src="@img/home/banner.png" alt="" />
+      <div class="bg" />
       <div class="main-wrap">
         <div class="item-con">
           <h3>{{ con.title }}</h3>
@@ -70,6 +70,7 @@ export default {
       width: 100%;
       height: 100%;
       z-index: -1;
+      background-color: #1563f9;
     }
     .main-wrap {
       width: @contentWidth;

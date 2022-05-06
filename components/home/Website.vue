@@ -114,7 +114,7 @@ export default {
     }
 
     .tab-con {
-      background: url('~@img/home/product/bg.png');
+      background: #f3f8fd;
       background-size: 100% 100%;
       .flex-col;
       justify-content: flex-start;

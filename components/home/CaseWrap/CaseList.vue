@@ -25,10 +25,9 @@
     <a-modal v-model="visible" width="70%" :title="activeItem.name" ok-text="确认" cancel-text="取消" @ok="hideModal">
       <div>
         <a-descriptions title="项目介绍">
-          <a-descriptions-item label="开发周期"> Zhou Maomao </a-descriptions-item>
-          <a-descriptions-item label="我负责"> 1810000000 </a-descriptions-item>
-          <a-descriptions-item label="线上链接"> Hangzhou, Zhejiang </a-descriptions-item>
-          <a-descriptions-item label="相关难点"> empty </a-descriptions-item>
+          <a-descriptions-item v-for="con in activeItemCon" :key="con[0]" :label="con[0]">
+            {{ con[1] }}
+          </a-descriptions-item>
         </a-descriptions>
       </div>
       <div class="thumb-example">
@@ -122,6 +121,10 @@ export default {
       list = [...stackArr, ...typeArr];
 
       return list;
+    },
+    activeItemCon() {
+      const finalData = (this.activeItem.con && this.activeItem.con.map(item => item.split(':'))) || [];
+      return finalData;
     },
   },
   watch: {},

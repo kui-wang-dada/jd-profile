@@ -1,7 +1,6 @@
 const tabList = [
   {
     name: 'wholeren',
-    icon: require('@/assets/img/work/wholeren/logo.png'),
     title: '厚仁教育',
     time: '2019/3 - 至今',
     label: [
@@ -51,7 +50,6 @@ const tabList = [
   },
   {
     name: 'xunfei',
-    icon: require('@/assets/img/work/xunfei/logo.png'),
     title: '科大讯飞',
     time: '2018/3 - 2019/3',
     label: ['前期单个项目维护，后期泉山项目群负责人', '+项目广度，+Vue 深入理解，+前端小组工作管理'],
@@ -78,7 +76,6 @@ const tabList = [
   },
   {
     name: 'yryz',
-    icon: require('@/assets/img/work/yryz/logo.png'),
     title: '悠然一指',
     time: '2017/3 - 2018/3',
     label: ['负责App单个模块,', '+RN，+JS，+Vue，+前端基础'],
@@ -99,7 +96,6 @@ const tabList = [
   },
   {
     name: 'yunli',
-    icon: require('@/assets/img/work/yunli/logo.png'),
     title: '云里服务',
     time: '2016/10 - 2017/3',
     label: ['入门'],
@@ -132,7 +128,7 @@ const projectList = [
       require('@/assets/img/project/app/sport/2.png'),
       require('@/assets/img/project/app/sport/3.png'),
     ],
-    con: ['开发周期，', '', ''],
+    con: ['开发周期:1个月', '我负责:独立开发', '线上链接:暂无', '相关难点:集成即时通讯-集成图表-集成三方登录'],
   },
   {
     name: 'RN厚仁教育app',
@@ -309,7 +305,7 @@ const projectList = [
     name: '美国校园疫情网',
     stack: ['vue', 'nuxt'],
     type: ['网站'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '针对美国校园疫情，提供疫情数据和学校数据。使用nuxt保证良好的seo',
     thumb: require('@/assets/img/project/web/covid/thumb.png'),
     img: [
       require('@/assets/img/project/web/covid/thumb.png'),
@@ -329,7 +325,7 @@ const projectList = [
     name: '美国高校排名网',
     stack: ['vue', 'nuxt'],
     type: ['网站'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '针对c端用户，提供高校排名数据，使用nuxt保证良好seo',
     thumb: require('@/assets/img/project/web/school/thumb.png'),
     img: [
       require('@/assets/img/project/web/school/thumb.png'),
@@ -341,7 +337,7 @@ const projectList = [
     name: '订单支付',
     stack: ['vue', 'nuxt'],
     type: ['网站'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用vue开发的用户付费界面',
     thumb: require('@/assets/img/project/web/shop/thumb.png'),
     img: [
       require('@/assets/img/project/web/shop/thumb.png'),
@@ -356,7 +352,7 @@ const projectList = [
     name: '教师成长档案',
     stack: ['vue'],
     type: ['网站'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用vue开发的后台管理系统',
     thumb: require('@/assets/img/project/web/teacher-admin/thumb.png'),
     img: [
       require('@/assets/img/project/web/teacher-admin/thumb.png'),
@@ -374,7 +370,7 @@ const projectList = [
     name: '音乐播放器',
     stack: ['vue'],
     type: ['网站'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用vue开发的音乐播放器（练手）',
     thumb: require('@/assets/img/project/web/music/thumb.png'),
     img: [
       require('@/assets/img/project/web/music/thumb.png'),
@@ -393,7 +389,7 @@ const projectList = [
     name: 'Nw实现桌面程序',
     stack: ['nw'],
     type: ['电脑桌面程序'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用nw开发的新疆课堂课件桌面程序。',
     thumb: require('@/assets/img/project/computer/nw/thumb.png'),
     img: [
       require('@/assets/img/project/computer/nw/thumb.png'),
@@ -409,7 +405,7 @@ const projectList = [
     name: 'Egret白鹭引擎练手小鸟飞飞',
     stack: ['Egret'],
     type: ['小游戏'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用Egret+Typescript开发阿尔法蛋上的幼儿园小游戏（小鸟飞飞为练手项目）',
     thumb: require('@/assets/img/project/game/bird/thumb.png'),
     img: [require('@/assets/img/project/game/bird/thumb.png'), require('@/assets/img/project/game/bird/1.png')],
   },
@@ -417,7 +413,7 @@ const projectList = [
     name: 'Node实现微信公众号后台',
     stack: ['node'],
     type: ['后端'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用node调用jssdk，网页端集成微信登录，付款等功能',
     thumb: require('@/assets/img/project/bs/node/thumb.png'),
     img: [
       require('@/assets/img/project/app/sport/thumb.png'),
@@ -430,7 +426,7 @@ const projectList = [
     name: '微信企业办公小程序',
     stack: ['uniapp', 'java'],
     type: ['后端', '小程序'],
-    label: '利用RN独立开发厚仁教育商用APP,用于企业用户的信息对接，课程管理。',
+    label: '使用java+uniapp，实现企业办公小程序（练手）',
     thumb: require('@/assets/img/project/bs/java/thumb.png'),
     img: [
       require('@/assets/img/project/app/sport/thumb.png'),
