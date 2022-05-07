@@ -2,8 +2,8 @@ import path from 'path';
 import pxtorem from 'postcss-pxtorem';
 import autoprefixer from 'autoprefixer';
 export default {
-  // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
+  // Global page headers: https://go.nuxtjs.dev/config-head
   server: {
     port: process.env.PORT || 5001, // default: 3000
     host: '0.0.0.0', // default: localhost
@@ -92,7 +92,12 @@ export default {
         config.optimization.minimizer[0].options.terserOptions.compress.warnings = false;
       }
     },
-
+    optimization: {
+      splitChunks: {
+        minSize: 10000,
+        maxSize: 500000,
+      },
+    },
     loaders: {
       less: {
         lessOptions: {
