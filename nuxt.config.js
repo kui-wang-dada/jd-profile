@@ -3,6 +3,7 @@ import pxtorem from 'postcss-pxtorem';
 import autoprefixer from 'autoprefixer';
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+  target: 'static',
   server: {
     port: process.env.PORT || 5001, // default: 3000
     host: '0.0.0.0', // default: localhost
