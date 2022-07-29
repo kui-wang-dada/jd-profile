@@ -2,7 +2,7 @@
   <div class="wrap section-wrap">
     <div class="top-wrap">
       <h3>工作经验</h3>
-      <h5>6年前端工作经验，业余时间自学java，golang等</h5>
+      <h5>6年前端工作经验，业余时间自学solidity，node，java，golang等</h5>
       <img class="icon-list" src="@img/home/icon-list.png" alt="" />
     </div>
 

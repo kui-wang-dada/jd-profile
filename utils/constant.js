@@ -1,5 +1,33 @@
 const tabList = [
   {
+    name: 'astriddao',
+    title: 'Astriddao',
+    time: '2022/3 - 至今',
+    label: ['sio2项目前端负责人，Astriddao协助开发', '熟悉技术栈：Web3，钱包连接，合约连接，React，Next 等'],
+    con: [
+      {
+        name: 'Sio2前端开发',
+        duty: '前端独立开发',
+        stack: 'Web3，MetaMask，React，Next',
+        hard: '合约对接',
+        detail: {
+          label: 'sio2测试地址',
+          link: 'https://shibuya.sio2.finance',
+        },
+      },
+      {
+        name: 'Astriddao前端开发',
+        duty: '协助Astriddao开发',
+        stack: 'web3，react',
+        hard: '熟悉web3钱包连接',
+        detail: {
+          label: 'astriddao线上地址',
+          link: 'https://app.astriddao.xyz',
+        },
+      },
+    ],
+  },
+  {
     name: 'wholeren',
     title: '厚仁教育',
     time: '2019/3 - 至今',
@@ -116,6 +144,36 @@ const tabList = [
   },
 ];
 const projectList = [
+  {
+    name: 'sio2',
+    stack: ['react web3'],
+    type: ['网站'],
+    label: '开发web3线上借贷平台',
+    thumb: require('@/assets/img/project/web/sio2/thumb.png'),
+    img: [
+      require('@/assets/img/project/web/sio2/2.png'),
+      require('@/assets/img/project/web/sio2/3.png'),
+      require('@/assets/img/project/web/sio2/4.png'),
+      require('@/assets/img/project/web/sio2/5.png'),
+      require('@/assets/img/project/web/sio2/6.png'),
+    ],
+    con: ['开发周期:2个月', '我负责:前端独立开发', '线上链接:shibuya.sio2.finance', '相关难点:合约集成'],
+  },
+  {
+    name: 'astriddao',
+    stack: ['react web3'],
+    type: ['网站'],
+    label: '开发web3线上虚拟币平台',
+    thumb: require('@/assets/img/project/web/astriddao/thumb.png'),
+    img: [
+      require('@/assets/img/project/web/astriddao/1.png'),
+      require('@/assets/img/project/web/astriddao/3.png'),
+      require('@/assets/img/project/web/astriddao/4.png'),
+      require('@/assets/img/project/web/astriddao/5.png'),
+      require('@/assets/img/project/web/astriddao/6.png'),
+    ],
+    con: ['开发周期:1个月', '我负责:响应式适配', '线上链接:app.astriddao.xyz', 'theme-ui'],
+  },
   {
     name: '体育类App',
     stack: ['react-native'],

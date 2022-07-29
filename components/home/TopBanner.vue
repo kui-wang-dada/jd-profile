@@ -27,10 +27,10 @@ export default {
         title: '王逵',
         label1:
           '2014年毕业于华中农业大学，毕业后去乡镇事业单位从事基层党政工作一年半，期间自学java，前端等知识，于2016年10月转行',
-        label2: '先后经历云里服务（一年），悠然一指（一年），科大讯飞（一年），厚仁服务（三年至今）',
+        label2: '先后经历区块链公司（半年），厚仁服务（三年），科大讯飞（一年），悠然一指（一年），云里服务（一年）',
         label3:
-          '期间有生产项目的技术栈有：vue，小程序原生，react-native，egret小游戏，cordova，flutter，taro，uniapp，react+formily等',
-        label4: '同时自学了node，java spring boot，golang等后端语言',
+          '期间有生产项目的技术栈有：Web3，vue，小程序原生，react-native，egret小游戏，cordova，flutter，taro，uniapp，react+formily等',
+        label4: '同时自学了solidity，node，java spring boot，golang等后端语言',
         label5: '期待同行！！',
       },
     };
