@@ -6,7 +6,7 @@ module.exports = {
     copyTip: 'Click to copy',
     jumpTip: 'Click to jump',
     all: 'all',
-    comfirm: 'Confirm',
+    confirm: 'Confirm',
     cancel: 'Cancel',
     detail: 'View details',
   },

@@ -6,7 +6,7 @@ module.exports = {
     copyTip: '点击会复制',
     jumpTip: '点击会跳转',
     all: '全部',
-    comfirm: '确认',
+    confirm: '确认',
     cancel: '取消',
     detail: '查看详情',
   },
