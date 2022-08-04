@@ -1,7 +1,7 @@
 <template>
   <div class="filter-wrap">
     <div class="filter-item">
-      <span class="label">项目类型：</span>
+      <span class="label">{{ $t('case.label1') }}：</span>
       <div class="list-wrap">
         <a-checkable-tag
           v-for="typeItem in typeList"
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="filter-item">
-      <span class="label">分类：</span>
+      <span class="label">{{ $t('case.label2') }}：</span>
       <div class="list-wrap">
         <a-checkable-tag
           v-for="stackItem in stackList"
@@ -43,21 +43,23 @@ export default {
     return {};
   },
   computed: {
-    ...mapState('common', ['projectList']),
+    ...mapState(['projectList']),
     stackList() {
       let list = [];
+
       this.projectList.forEach(item => {
         list = [...list, ...item.stack];
       });
-      list = ['全部', ...new Set(list)];
+      list = [this.$t('common.all'), ...new Set(list)];
       return list;
     },
     typeList() {
       let list = [];
+      console.log(this.projectList, '123');
       this.projectList.forEach(item => {
         list = [...list, ...item.type];
       });
-      list = ['全部', ...new Set(list)];
+      list = [this.$t('common.all'), ...new Set(list)];
       return list;
     },
   },
@@ -67,7 +69,7 @@ export default {
   methods: {
     changeType(checked, item) {
       console.log(checked, item);
-      if (item === '全部') {
+      if (item === this.$t('common.all')) {
         const typeList = checked ? this.typeList : [];
         this.$emit('changeFilter', { stackCheck: this.filter.stackCheck, typeCheck: typeList });
         return;
@@ -87,7 +89,7 @@ export default {
     },
     changeStack(checked, item) {
       console.log(checked, item);
-      if (item === '全部') {
+      if (item === this.$t('common.all')) {
         const stackList = checked ? this.stackList : [];
         this.$emit('changeFilter', { typeCheck: this.filter.typeCheck, stackCheck: stackList });
         return;

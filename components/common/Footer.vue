@@ -27,8 +27,8 @@
       </div>
     </div>
     <div class="copyright">
-      <p>Copyright © 王逵 版权所有</p>
-      <p>备案号：鄂ICP备18009297号</p>
+      <p>{{ $t('footer.copyright.title1') }}</p>
+      <p>{{ $t('footer.copyright.title2') }}</p>
     </div>
   </div>
 </template>
@@ -42,15 +42,15 @@ export default {
     return {};
   },
   computed: {
-    ...mapState('common', ['tabList', 'serviceList']),
+    ...mapState(['tabList']),
     majorList() {
       return [
         {
-          title: '前端自学社区联盟（公众号）',
+          title: this.$t('footer.major.title1'),
           icon: require('@img/common/qrcode-1.png'),
         },
         {
-          title: 'web前端自学社区（小程序）',
+          title: this.$t('footer.major.title2'),
           icon: require('@img/common/qrcode-2.png'),
         },
       ];
@@ -58,19 +58,19 @@ export default {
     linkList() {
       return [
         {
-          title: '相关信息',
+          title: this.$t('footer.link.title'),
           con: [
             {
-              title: '微信号',
+              title: this.$t('footer.link.con1'),
               value: 'wangkui125',
             },
             {
-              title: '手机号',
+              title: this.$t('footer.link.con2'),
               value: '13100671550',
             },
             {
-              title: '城市',
-              value: '湖北武汉',
+              title: this.$t('footer.link.con3'),
+              value: this.$t('footer.link.con4'),
             },
             {
               title: 'github',
@@ -87,13 +87,13 @@ export default {
   methods: {
     handleContact(item) {
       this.$notification.error({
-        message: '正在开发中',
+        message: this.t('common.copyTip'),
         description: '点击会复制，',
       });
     },
     handleLink(item) {
       this.$notification.error({
-        message: '正在开发中',
+        message: this.t('common.jumpTip'),
         description: '点击会跳转',
       });
     },

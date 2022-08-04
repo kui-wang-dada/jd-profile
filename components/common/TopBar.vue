@@ -15,16 +15,13 @@
         <div class="lang-wrap">
           <img class="icon-lang" src="@img/common/icon-lang.png" alt="" />
           <a-dropdown>
-            <p class="ant-dropdown-link">中文 <a-icon type="down" /></p>
-            <a-menu slot="overlay" @click="handleMenu">
+            <p class="ant-dropdown-link">{{ keyValue }} <a-icon type="down" /></p>
+            <a-menu slot="overlay" @click="handleLangItem">
               <a-menu-item key="zh">
                 <a href="javascript:;">中文简体</a>
               </a-menu-item>
               <a-menu-item key="en">
                 <a href="javascript:;">English</a>
-              </a-menu-item>
-              <a-menu-item key="zh-tw">
-                <a href="javascript:;">中文繁体</a>
               </a-menu-item>
             </a-menu>
           </a-dropdown>
@@ -35,6 +32,7 @@
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex';
 export default {
   components: {},
   props: {},
@@ -43,28 +41,40 @@ export default {
       activeIndex: 0,
       headerChange: false,
       shadowRoute: ['work'],
-      list: [
+      numArr: [0, 0, 0, 0],
+    };
+  },
+  computed: {
+    ...mapState(['lang', 'tabList']),
+    list() {
+      return [
         {
-          title: '首页',
-          name: '',
+          title: this.$t('header.title1'),
+          name: 'index',
         },
         {
-          title: '工作经验',
+          title: this.$t('header.title2'),
           name: 'work',
         },
         {
-          title: '项目经历',
+          title: this.$t('header.title3'),
           name: 'project',
         },
 
         {
-          title: '相关文章',
+          title: this.$t('header.title4'),
           name: 'blog',
         },
-      ],
-    };
+      ];
+    },
+    keyValue() {
+      const stragety = {
+        zh: this.$t('common.zh'),
+        en: this.$t('common.en'),
+      };
+      return stragety[this.lang];
+    },
   },
-  computed: {},
   watch: {
     $route(newV) {
       this.checkRoute(newV);
@@ -82,22 +92,23 @@ export default {
     window.removeEventListener('scroll', this.onScroll);
   },
   methods: {
+    ...mapMutations({
+      setLang: 'SET_LANG',
+    }),
     initDomHeight() {
       const sectionArr = document.getElementsByClassName('section-wrap');
       let initTop = 50;
-      Array.prototype.map.call(sectionArr, (item, index) => {
+      this.numArr = Array.prototype.map.call(sectionArr, (item, index) => {
         if (index === 0) {
           initTop = item.offsetTop + initTop;
         }
-        this.list[index].num = item.offsetTop - initTop;
+        return item.offsetTop - initTop;
       });
     },
-    handleMenu() {
-      this.$notification.error({
-        message: '正在开发中',
-        description:
-          '语言替换放在最后完成，当所有内容确定后，再去写语言配置文件，比较高效；暂时只考虑中文简体/繁体/英文',
-      });
+    handleLangItem(e) {
+      console.log(e, 'ee');
+      this.setLang(e.key);
+      this.$i18n.locale = e.key;
     },
     onScroll() {
       const scrollTop = document.documentElement.scrollTop;
@@ -108,8 +119,8 @@ export default {
         this.headerChange = false;
       }
       let activeIndex = 0;
-      this.list.forEach((listItem, index) => {
-        if (scrollTop >= listItem.num) {
+      this.numArr.forEach((num, index) => {
+        if (scrollTop >= num) {
           activeIndex = index;
         }
       });
@@ -121,8 +132,8 @@ export default {
         return;
       }
       this.activeIndex = index;
-      const top = this.list[index].num;
-      console.log(top, this.list, 'top');
+      const top = this.numArr[index];
+      console.log(top, 'top');
       document.documentElement.scrollTo({ left: 0, top, behavior: 'smooth' });
     },
     checkRoute(newV) {

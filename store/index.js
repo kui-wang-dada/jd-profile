@@ -1,15 +1,35 @@
 /** @format */
 
 import createLogger from 'vuex/dist/logger';
+import { tabList, projectList, tabListEn, projectListEn } from '@/utils';
 const debug = process.env.NODE_ENV !== 'production';
 export default {
   state: () => ({
     lang: 'zh',
+    tabList,
+    projectList,
   }),
   mutations: {
     // 此处为设置locale
     SET_LANG(state, lang) {
+      const stragetyTab = {
+        zh: tabList,
+        en: tabListEn,
+      };
+      const stragetyProject = {
+        zh: projectList,
+        en: projectListEn,
+      };
+      state.tabList = stragetyTab[lang] || tabList;
+      state.projectList = stragetyProject[lang] || tabList;
       state.lang = lang;
+    },
+    // 设置用户信息
+    SET_TAB_LIST: (state, data) => {
+      state.tabList = data;
+    },
+    SET_PROJECT_LIST: (state, data) => {
+      state.projectList = data;
     },
   },
   getters: {

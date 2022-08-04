@@ -9,11 +9,11 @@
               <h3>{{ item.name }}</h3>
               <p>{{ item.label }}</p>
               <div class="type-wrap">
-                <span>项目分类：</span>
+                <span>{{ $t('case.label3') }}：</span>
                 <a-tag v-for="tag in item.type" :key="tag" color="red">{{ tag }}</a-tag>
               </div>
               <div class="stack-wrap">
-                <span>技术栈分类：</span>
+                <span>{{ $t('case.label4') }}：</span>
                 <a-tag v-for="tag in item.stack" :key="tag" color="green">{{ tag }}</a-tag>
               </div>
             </div>
@@ -22,16 +22,23 @@
         </a-card>
       </a-list-item>
     </a-list>
-    <a-modal v-model="visible" width="70%" :title="activeItem.name" ok-text="确认" cancel-text="取消" @ok="hideModal">
+    <a-modal
+      v-model="visible"
+      width="70%"
+      :title="activeItem.name"
+      :ok-text="$t('common.confirm')"
+      :cancel-text="$t('common.cancel')"
+      @ok="hideModal"
+    >
       <div>
-        <a-descriptions title="项目介绍">
+        <a-descriptions :title="$t('case.label6')">
           <a-descriptions-item v-for="con in activeItemCon" :key="con[0]" :label="con[0]">
             {{ con[1] }}
           </a-descriptions-item>
         </a-descriptions>
       </div>
       <div class="thumb-example">
-        <h3>项目截图</h3>
+        <h3>{{ $t('case.label5') }}</h3>
         <client-only>
           <!-- swiper1 -->
           <swiper ref="swiperTop" class="swiper gallery-top" :options="swiperOptionTop">
@@ -96,7 +103,7 @@ export default {
     };
   },
   computed: {
-    ...mapState('common', ['projectList']),
+    ...mapState(['projectList']),
     list() {
       if (!this.filter.stackCheck.length && !this.filter.typeCheck.length) {
         return this.projectList;

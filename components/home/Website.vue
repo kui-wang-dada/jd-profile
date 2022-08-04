@@ -1,8 +1,8 @@
 <template>
   <div class="wrap section-wrap">
     <div class="top-wrap">
-      <h3>工作经验</h3>
-      <h5>6年前端工作经验，业余时间自学solidity，node，java，golang等</h5>
+      <h3>{{ $t('website.title1') }}</h3>
+      <h5>{{ $t('website.title2') }}</h5>
       <img class="icon-list" src="@img/home/icon-list.png" alt="" />
     </div>
 
@@ -16,7 +16,7 @@
         <div class="tab-con">
           <div class="tab-top">
             <h4>{{ item.title }}</h4>
-            <h5>工作时间:{{ item.time }}</h5>
+            <h5>{{ $t('website.time') }}:{{ item.time }}</h5>
             <h6 v-for="label_ in item.label" :key="label_">{{ label_ }}</h6>
           </div>
           <div class="tab-con-main">
@@ -40,38 +40,39 @@ export default {
   components: {},
   props: {},
   data() {
-    return {
-      columns: [
+    return {};
+  },
+  computed: {
+    ...mapState(['tabList']),
+    columns() {
+      return [
         {
-          title: '序号',
+          title: this.$t('website.column1'),
           scopedSlots: { customRender: 'index' },
         },
         {
-          title: '板块名称',
+          title: this.$t('website.column2'),
           dataIndex: 'name',
         },
 
         {
-          title: '负责',
+          title: this.$t('website.column3'),
           dataIndex: 'duty',
         },
         {
-          title: '技术栈',
+          title: this.$t('website.column4'),
           dataIndex: 'stack',
         },
         {
-          title: '难点',
+          title: this.$t('website.column5'),
           dataIndex: 'hard',
         },
         {
-          title: '查看详情',
+          title: this.$t('website.column6'),
           scopedSlots: { customRender: 'link' },
         },
-      ],
-    };
-  },
-  computed: {
-    ...mapState('common', ['tabList']),
+      ];
+    },
   },
   watch: {},
   created() {},
