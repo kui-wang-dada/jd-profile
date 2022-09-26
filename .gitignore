@@ -70,7 +70,6 @@ typings/
 
 # Nuxt generate
 dist
-jd-profile
 
 # vuepress build output
 .vuepress/dist

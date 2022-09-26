@@ -27,7 +27,7 @@ export default {
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     script: [
       { src: '/js/rem.js', type: 'text/javascript', charset: 'utf-8' },
-      { src: '/js/init.js', type: 'text/javascript', charset: 'utf-8' },
+      // { src: '/js/init.js', type: 'text/javascript', charset: 'utf-8' },
     ],
   },
 
