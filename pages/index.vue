@@ -10,7 +10,7 @@
 </template>
 
 <script>
-// 测试发布3
+// 测试发布4
 import { TopBanner, Website, Blog, CaseWrap } from '@/components/home';
 export default {
   components: { TopBanner, Website, Blog, CaseWrap },
