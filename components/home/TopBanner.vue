@@ -11,7 +11,7 @@
           <h5>{{ con.label4 }}</h5>
           <h5>{{ con.label5 }}</h5>
         </div>
-        <img src="@img/common/profile.jpg" alt="" />
+        <img src="@img/common/profile.jpeg" alt="" />
       </div>
     </div>
   </div>

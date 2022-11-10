@@ -5,7 +5,7 @@ import { tabList, projectList, tabListEn, projectListEn } from '@/utils';
 const debug = process.env.NODE_ENV !== 'production';
 export default {
   state: () => ({
-    lang: 'zh',
+    lang: 'en',
     tabList,
     projectList,
   }),

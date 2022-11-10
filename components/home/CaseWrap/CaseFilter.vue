@@ -116,13 +116,17 @@ export default {
     .flex-row;
     justify-content: flex-start;
     .label {
-      font-size: 16px;
+      font-size: 20px;
       color: #333;
       font-weight: bold;
-      width: 100px;
+      width: 150px;
     }
     .list-wrap {
       margin-bottom: 10px;
+      .ant-tag {
+        font-size: 16px;
+        cursor: pointer;
+      }
     }
   }
 }

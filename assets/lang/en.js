@@ -5,7 +5,7 @@ module.exports = {
     wait: 'under development',
     copyTip: 'Click to copy',
     jumpTip: 'Click to jump',
-    all: 'all',
+    all: 'All',
     confirm: 'Confirm',
     cancel: 'Cancel',
     detail: 'View details',
@@ -17,7 +17,7 @@ module.exports = {
     title4: 'Related Articles',
   },
   banner: {
-    title1: 'Wang Kui',
+    title1: 'Kui (Kevin) Wang',
     label1:
       'Graduated from Huazhong Agricultural University in 2014. After graduation, he went to township institutions to engage in grassroots party and government work for one and a half years. During this period, he taught himself java, front-end and other knowledge, and changed careers in October 2016',
     label2:

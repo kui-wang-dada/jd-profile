@@ -650,7 +650,7 @@ const projectListEn = [
   {
     name: 'sio2',
     stack: ['react web3'],
-    type: ['website'],
+    type: ['Website'],
     label: 'Development of web3 online lending platform',
     thumb: require('@/assets/img/project/web/sio2/thumb.png'),
     img: [
@@ -670,7 +670,7 @@ const projectListEn = [
   {
     name: 'astriddao',
     stack: ['react web3'],
-    type: ['website'],
+    type: ['Website'],
     label: 'Development of web3 online virtual currency platform',
     thumb: require('@/assets/img/project/web/astriddao/thumb.png'),
     img: [
@@ -690,7 +690,7 @@ const projectListEn = [
   {
     name: 'Sports App',
     stack: ['react-native'],
-    type: ['app'],
+    type: ['App'],
     label:
       'Use RN to independently develop sports apps, including live broadcast and communication, and launch ios and Android platforms',
     thumb: require('@/assets/img/project/app/sport/thumb.png'),
@@ -710,7 +710,7 @@ const projectListEn = [
   {
     name: 'RN Huren Education app',
     stack: ['react-native'],
-    type: ['app'],
+    type: ['App'],
     label:
       'Using RN to independently develop a commercial APP, which is used for information connection and course management of enterprise users. Launched on ios and Android platforms',
     thumb: require('@/assets/img/project/app/wholeren/thumb.png'),
@@ -747,7 +747,7 @@ const projectListEn = [
   {
     name: 'RN Development Circle App',
     stack: ['react-native'],
-    type: ['app'],
+    type: ['App'],
     label:
       'Using RN to develop commercial APP, mainly responsible for the home page, article details page page logic, online ios and Android platforms',
     thumb: require('@/assets/img/project/app/quanhu/thumb.png'),
@@ -765,7 +765,7 @@ const projectListEn = [
   {
     name: 'RN Development Leisurely Point App',
     stack: ['react-native'],
-    type: ['app'],
+    type: ['App'],
     label:
       'Using RN to develop commercial APP, mainly responsible for the home page, comments, likes and other functional modules, online on ios and Android platforms',
     thumb: require('@/assets/img/project/app/yryz/thumb.png'),
@@ -789,7 +789,7 @@ const projectListEn = [
   {
     name: 'Huren service applet',
     stack: ['taro'],
-    type: ['Mini Program'],
+    type: ['MiniProgram'],
     label:
       "The company's business introduction mini-program developed for all C-end users, and publishes WeChat and Toutiao at the same time",
     thumb: require('@/assets/img/project/applets/wholeren-fuwu/thumb.png'),
@@ -804,7 +804,7 @@ const projectListEn = [
   {
     name: 'Houren Study Abroad WeChat Mini Program',
     stack: ['taro'],
-    type: ['Mini Program'],
+    type: ['MiniProgram'],
     label:
       'For all C-end users, the epidemic data of American universities is provided, and a richer web version is developed through nuxt',
     thumb: require('@/assets/img/project/applets/wholeren-liuxue/thumb.png'),
@@ -818,7 +818,7 @@ const projectListEn = [
   {
     name: 'Hou Ren Student Center WeChat Mini Program',
     stack: ['taro'],
-    type: ['Mini Program'],
+    type: ['MiniProgram'],
     label: 'For all paid users, provide daily management, service tracking, application feedback and other functions',
     thumb: require('@/assets/img/project/applets/wholeren-student/thumb.png'),
     img: [
@@ -838,7 +838,7 @@ const projectListEn = [
   {
     name: 'Houren Tutor Center WeChat Mini Program',
     stack: ['taro'],
-    type: ['Mini Program'],
+    type: ['MiniProgram'],
     label: 'For company service tutors, it provides functions such as student management and service tracking',
     thumb: require('@/assets/img/project/applets/wholeren-teacher/thumb.png'),
     img: [
@@ -855,7 +855,7 @@ const projectListEn = [
   {
     name: 'Study in the U.S. Mentor Column',
     stack: ['taro'],
-    type: ['Mini Program'],
+    type: ['MiniProgram'],
     label: 'For C-end users, provide study abroad information',
     thumb: require('@/assets/img/project/applets/wholeren-blog/thumb.png'),
     img: [
@@ -870,7 +870,7 @@ const projectListEn = [
   {
     name: 'fits-erp enterprise background management platform',
     stack: ['react', 'golang'],
-    type: ['website', 'backend'],
+    type: ['Website', 'Backend'],
     label: 'Customized enterprise background management platform for company business',
     thumb: require('@/assets/img/project/web/fits/thumb.png'),
     img: [
@@ -886,7 +886,7 @@ const projectListEn = [
   {
     name: 'US Campus Epidemic Network',
     stack: ['vue', 'nuxt'],
-    type: ['website'],
+    type: ['Website'],
     label:
       "In response to the US campus epidemic, provide epidemic data and school data. Guaranteed good seo' with nuxt",
     thumb: require('@/assets/img/project/web/covid/thumb.png'),
@@ -907,7 +907,7 @@ const projectListEn = [
   {
     name: 'American College Ranking Network',
     stack: ['vue', 'nuxt'],
-    type: ['website'],
+    type: ['Website'],
     label: 'For c-end users, provide college ranking data, use nuxt to ensure good seo',
     thumb: require('@/assets/img/project/web/school/thumb.png'),
     img: [
@@ -919,7 +919,7 @@ const projectListEn = [
   {
     name: 'Order payment',
     stack: ['vue', 'nuxt'],
-    type: ['website'],
+    type: ['Website'],
     label: 'User payment interface developed with vue',
     thumb: require('@/assets/img/project/web/shop/thumb.png'),
     img: [
@@ -934,7 +934,7 @@ const projectListEn = [
   {
     name: 'Teacher Growth Profile',
     stack: ['vue'],
-    type: ['website'],
+    type: ['Website'],
     label: 'The background management system developed by vue',
     thumb: require('@/assets/img/project/web/teacher-admin/thumb.png'),
     img: [
@@ -952,7 +952,7 @@ const projectListEn = [
   {
     name: 'music player',
     stack: ['vue'],
-    type: ['website'],
+    type: ['Website'],
     label: 'Use the music player developed by vue (practice)',
     thumb: require('@/assets/img/project/web/music/thumb.png'),
     img: [
@@ -971,7 +971,7 @@ const projectListEn = [
   {
     name: 'Nw implements desktop program',
     stack: ['nw'],
-    type: ['computer desktop program'],
+    type: ['DesktopProgram'],
     label: 'Using the Xinjiang classroom courseware desktop program developed by nw. ',
     thumb: require('@/assets/img/project/computer/nw/thumb.png'),
     img: [
@@ -987,7 +987,7 @@ const projectListEn = [
   {
     name: 'Egret egret engine training hand and bird flying',
     stack: ['Egret'],
-    type: ['mini game'],
+    type: ['MiniGame'],
     label:
       'Use Egret+Typescript to develop kindergarten games on Alpha Eggs (Little Bird Feifei is a hand training project)',
     thumb: require('@/assets/img/project/game/bird/thumb.png'),
@@ -996,7 +996,7 @@ const projectListEn = [
   {
     name: 'Node implements WeChat public account background',
     stack: ['node'],
-    type: ['backend'],
+    type: ['Backend'],
     label: 'Use node to call jssdk, integrate WeChat login, payment and other functions on the web page',
     thumb: require('@/assets/img/project/bs/node/thumb.png'),
     img: [
@@ -1009,7 +1009,7 @@ const projectListEn = [
   {
     name: 'WeChat Enterprise Office Mini Program',
     stack: ['uniapp', 'java'],
-    type: ['backend', 'mini program'],
+    type: ['Backend', 'MiniProgram'],
     label: 'Using java+uniapp to implement small corporate office programs (practice)',
     thumb: require('@/assets/img/project/bs/java/thumb.png'),
     img: [
