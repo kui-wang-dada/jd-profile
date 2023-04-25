@@ -684,6 +684,27 @@ const projectList = [
 ];
 const projectListEn = [
   {
+    name: 'noname monster',
+    stack: ['react web3'],
+    type: ['Website'],
+    label: 'Develop web3 nft trading platform',
+    thumb: require('@/assets/img/project/web/noname/thumb.png'),
+    img: [
+      require('@/assets/img/project/web/noname/1.png'),
+      require('@/assets/img/project/web/noname/2.png'),
+      require('@/assets/img/project/web/noname/3.png'),
+      require('@/assets/img/project/web/noname/4.png'),
+      require('@/assets/img/project/web/noname/5.png'),
+      require('@/assets/img/project/web/noname/6.png'),
+    ],
+    con: [
+      'Development cycle, 4 months',
+      'I am responsible for, front-end independent development',
+      'Online link, http://dev-app.noname.monster',
+      'Related difficulties, seaport method',
+    ],
+  },
+  {
     name: 'sio2',
     stack: ['react web3'],
     type: ['Website'],
@@ -697,10 +718,10 @@ const projectListEn = [
       require('@/assets/img/project/web/sio2/6.png'),
     ],
     con: [
-      'Development cycle: 2 months',
-      'I am responsible for: independent front-end development',
-      'Online link: shibuya.sio2.finance',
-      'Related difficulties: contract integration',
+      'Development cycle,2 months',
+      'I am responsible for,independent front-end development',
+      'Online link,http://shibuya.sio2.finance',
+      'Related difficulties,contract integration',
     ],
   },
   {
@@ -717,10 +738,10 @@ const projectListEn = [
       require('@/assets/img/project/web/astriddao/6.png'),
     ],
     con: [
-      'Development cycle: 1 month',
-      'I am responsible for: responsive adaptation',
-      'Online link: app.astriddao.xyz',
-      'theme-ui',
+      'Development cycle,1 month',
+      'I am responsible for,responsive adaptation',
+      'Online link,http://app.astriddao.xyz',
+      'Related difficulties,theme-ui',
     ],
   },
   {
