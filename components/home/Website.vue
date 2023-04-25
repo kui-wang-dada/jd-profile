@@ -22,7 +22,7 @@
           <div class="tab-con-main">
             <a-table rowKey="name" style="background: #fff" :columns="columns" :data-source="item.con">
               <span slot="index" slot-scope="text, record, index">{{ index + 1 }}</span>
-              <template slot="link" slot-scope="text, record">
+              <template v-if="record.detail" slot="link" slot-scope="text, record">
                 <a v-if="record.detail.link" :href="record.detail.link" target="_blank">{{ record.detail.label }}</a>
                 <span v-else>{{ record.detail.label }}</span>
               </template>

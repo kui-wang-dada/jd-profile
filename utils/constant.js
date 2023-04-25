@@ -6,6 +6,16 @@ const tabList = [
     label: ['sio2项目前端负责人，Astriddao协助开发', '熟悉技术栈：Web3，钱包连接，合约连接，React，Next 等'],
     con: [
       {
+        name: 'Noname Monster前端开发',
+        duty: '前端独立开发',
+        stack: 'Web3，MetaMask，React，Next',
+        hard: '合约对接',
+        detail: {
+          label: 'noname测试地址',
+          link: 'https://dev-app.noname.monster',
+        },
+      },
+      {
         name: 'Sio2前端开发',
         duty: '前端独立开发',
         stack: 'Web3，MetaMask，React，Next',
@@ -154,6 +164,16 @@ const tabListEn = [
     ],
     con: [
       {
+        name: 'Noname Monster front-end development',
+        duty: 'Front-end independent development',
+        stack: 'Web3, MetaMask, React, Next',
+        hard: 'Contract docking',
+        details: {
+          label: 'noname test address',
+          link: 'https://dev-app.noname.monster',
+        },
+      },
+      {
         name: 'Sio2 front-end development',
         duty: 'Front-end independent development',
         stack: 'Web3, MetaMask, React, Next',
@@ -297,6 +317,22 @@ const tabListEn = [
 ];
 const projectList = [
   {
+    name: 'noname monster',
+    stack: ['react web3'],
+    type: ['网站'],
+    label: '开发web3 nft交易平台',
+    thumb: require('@/assets/img/project/web/noname/thumb.png'),
+    img: [
+      require('@/assets/img/project/web/noname/1.png'),
+      require('@/assets/img/project/web/noname/2.png'),
+      require('@/assets/img/project/web/noname/3.png'),
+      require('@/assets/img/project/web/noname/4.png'),
+      require('@/assets/img/project/web/noname/5.png'),
+      require('@/assets/img/project/web/noname/6.png'),
+    ],
+    con: ['开发周期,4个月', '我负责,前端独立开发', '线上链接,http://dev-app.noname.monster', '相关难点,seaport方法'],
+  },
+  {
     name: 'sio2',
     stack: ['react web3'],
     type: ['网站'],
@@ -309,7 +345,7 @@ const projectList = [
       require('@/assets/img/project/web/sio2/5.png'),
       require('@/assets/img/project/web/sio2/6.png'),
     ],
-    con: ['开发周期:2个月', '我负责:前端独立开发', '线上链接:shibuya.sio2.finance', '相关难点:合约集成'],
+    con: ['开发周期,2个月', '我负责,前端独立开发', '线上链接,http://shibuya.sio2.finance', '相关难点,合约集成'],
   },
   {
     name: 'astriddao',
@@ -324,7 +360,7 @@ const projectList = [
       require('@/assets/img/project/web/astriddao/5.png'),
       require('@/assets/img/project/web/astriddao/6.png'),
     ],
-    con: ['开发周期:1个月', '我负责:响应式适配', '线上链接:app.astriddao.xyz', 'theme-ui'],
+    con: ['开发周期,1个月', '我负责,响应式适配', '线上链接,http://app.astriddao.xyz', '相关难点,theme-ui'],
   },
   {
     name: '体育类App',
@@ -338,7 +374,7 @@ const projectList = [
       require('@/assets/img/project/app/sport/2.png'),
       require('@/assets/img/project/app/sport/3.png'),
     ],
-    con: ['开发周期:1个月', '我负责:独立开发', '线上链接:暂无', '相关难点:集成即时通讯-集成图表-集成三方登录'],
+    con: ['开发周期,1个月', '我负责,独立开发', '线上链接,暂无', '相关难点,集成即时通讯-集成图表-集成三方登录'],
   },
   {
     name: 'RN厚仁教育app',

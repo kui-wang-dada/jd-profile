@@ -33,7 +33,8 @@
       <div>
         <a-descriptions :title="$t('case.label6')">
           <a-descriptions-item v-for="con in activeItemCon" :key="con[0]" :label="con[0]">
-            {{ con[1] }}
+            <a v-if="con[1].includes('http')" :href="con[1]" target="_blank"> {{ con[1] }}</a>
+            <span v-else>{{ con[1] }}</span>
           </a-descriptions-item>
         </a-descriptions>
       </div>
@@ -130,7 +131,7 @@ export default {
       return list;
     },
     activeItemCon() {
-      const finalData = (this.activeItem.con && this.activeItem.con.map(item => item.split(':'))) || [];
+      const finalData = (this.activeItem.con && this.activeItem.con.map(item => item.split(','))) || [];
       return finalData;
     },
   },
