@@ -11,13 +11,16 @@
           <h5>{{ con.label4 }}</h5>
           <h5>{{ con.label5 }}</h5>
         </div>
-        <img src="@img/common/profile.jpeg" alt="" />
+        <img v-if="lang === 'zh'" src="@img/home/wk-jd.png" />
+        <img v-else src="@img/home/wk-jd-en.png" />
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import { mapMutations, mapState } from 'vuex';
 export default {
   components: {},
   props: {},
@@ -25,6 +28,7 @@ export default {
     return {};
   },
   computed: {
+    ...mapState(['lang']),
     con() {
       return {
         title: this.$t('banner.title1'),
@@ -37,10 +41,10 @@ export default {
     },
   },
   watch: {},
-  created() {},
-  mounted() {},
+  created() { },
+  mounted() { },
   methods: {
-    onChange() {},
+    onChange() { },
   },
 };
 </script>
@@ -60,6 +64,7 @@ export default {
 
     position: relative;
     padding: 110px 0 50px;
+
     .bg {
       filter: brightness(60%);
       position: absolute;
@@ -72,11 +77,13 @@ export default {
       z-index: -1;
       background-color: #1563f9;
     }
+
     .main-wrap {
       width: @contentWidth;
       margin: 0 auto;
       .flex-row;
       justify-content: space-between;
+
       .item-con {
         h3 {
           font-size: 50px;
@@ -84,6 +91,7 @@ export default {
           color: #ffffff;
           text-align: left;
         }
+
         h5 {
           font-size: 20px;
           color: #ffffff;
@@ -91,6 +99,7 @@ export default {
           margin-top: 10px;
         }
       }
+
       img {
         width: 150px;
       }

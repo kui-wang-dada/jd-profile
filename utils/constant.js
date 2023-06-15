@@ -168,7 +168,7 @@ const tabListEn = [
         duty: 'Front-end independent development',
         stack: 'Web3, MetaMask, React, Next',
         hard: 'Contract docking',
-        details: {
+        detail: {
           label: 'noname test address',
           link: 'https://dev-app.noname.monster',
         },

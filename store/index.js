@@ -6,8 +6,8 @@ const debug = process.env.NODE_ENV !== 'production';
 export default {
   state: () => ({
     lang: 'en',
-    tabList,
-    projectList,
+    tabList: tabListEn,
+    projectList: projectListEn,
   }),
   mutations: {
     // 此处为设置locale
