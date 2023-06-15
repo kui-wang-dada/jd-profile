@@ -11,8 +11,9 @@
           <h5>{{ con.label4 }}</h5>
           <h5>{{ con.label5 }}</h5>
         </div>
-        <img v-if="lang === 'zh'" src="@img/home/wk-jd.png" />
-        <img v-else src="@img/home/wk-jd-en.png" />
+        <!-- <img v-if="lang === 'zh'" src="@img/home/wk-jd.png" />
+        <img v-else src="@img/home/wk-jd-en.png" /> -->
+        <img src="@img/common/profile.jpeg" alt="">
 
       </div>
     </div>
